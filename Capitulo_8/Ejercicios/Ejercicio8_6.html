@@ -1,0 +1,84 @@
+<!-- Montero Gómez Evelin -->
+<!-- Programación Web -->
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejercicio 8.6</title>
+        <link rel="stylesheet" href="../../styles/styles-ejer.css">
+        <!-- Fuente -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Clicker+Script&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <!-- Banner -->
+    <header class="banner">
+        <a href="../../index.html">
+            <label>
+                <input type="submit" name="regresar" class="boton-indice" value="Regresar">
+            </label>
+        </a>
+        <h1 id="titulo">Capítulo 8: Ejercicios</h1>
+        <p id="parrafo">
+            <strong>
+                < Ejercicio 8.6 />
+            </strong>
+        </p>
+        <h2 id="nombre">Montero G&oacute;mez Evelin</h2>
+        <!-- Botón direccionador a índice -->
+    </header>
+    
+    <header class="encabezado">
+        <h1 id="encabezado">Valor menor</h1>
+    </header>
+
+        <!-- Contenedor -->
+        <article class="contenedor">       
+            <b><p>Escriba una secuencia de comandos que encuentre el menor de varios enteros no negativos. 
+                Suponga que el primer valor leído especifica el número de valores que el usuario introducirá.</p></b>
+            <script>
+                /* variables */
+                let x = 0;
+                let y = 0;
+                let menor = 0;
+
+                /* pedir los valores al usuario */
+                x = window.prompt("Ingresa un número entero positivo: ","1");
+
+                menor = window.prompt("Ingresa  el primer número: ","1");
+
+                for(let i = 2;i<=x;i++){
+                    y = window.prompt("Ingresa un número entero: ");
+                    if(y < menor){
+                        menor = y;
+                    }
+                }
+                // escribir en el doc de html 5
+                document.writeln("El menor de los números es: "+menor);
+
+            </script>
+        </article>
+
+        <section class="botones">
+            <a href="Ejercicio8_5.html">
+                <label>
+                    <input type="submit" name="anterior" class="anterior" value="Anterior"/>
+                </label>
+            </a>
+            <a href="Ejercicio8_6.html">
+                <label>
+                    <input type="submit" name="inicio" class="inicio" value="Inicio">
+                </label>
+            </a>
+            <a href="Ejercicio8_7.html">
+                <label>
+                    <input type="submit" name="siguiente" class="siguiente" value="Siguiente">
+                </label>
+            </a>
+        </section>
+    </body>
+</html>

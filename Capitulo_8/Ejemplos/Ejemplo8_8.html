@@ -1,0 +1,75 @@
+<!-- Montero Gómez Evelin -->
+<!-- Programación Web -->
+<!DOCTYPE html>
+
+<!-- Fig. 8.8: Ejemplo8_5.css -->
+<!-- Uso de la instracción continue en una instracción for. -->
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejemplo 8.8</title>
+        <link rel="stylesheet" href="../../styles/styles-ejer.css">
+        <!-- Fuente -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Clicker+Script&display=swap" rel="stylesheet">
+
+    </head>
+
+    <body>
+
+        <!-- Banner -->
+    <header class="banner">
+        <a href="../../index.html">
+            <label>
+                <input type="submit" name="regresar" class="boton-indice" value="Regresar">
+            </label>
+        </a>
+        <h1 id="titulo">Capítulo 8: Ejemplos</h1>
+        <p id="parrafo">
+            <strong>
+                < Ejemplo 8.8 />
+            </strong>
+        </p>
+        <h2 id="nombre">Montero G&oacute;mez Evelin</h2>
+        <!-- Botón direccionador a índice -->
+    </header>
+    
+    <header class="encabezado">
+        <h1 id="encabezado">Alternar entre formatos de listas de HTML5</h1>
+    </header>
+
+        <!-- Contenedor -->
+        <article class="contenedor">       
+            <script>
+                for(var cuenta=1;cuenta<=10;++cuenta){
+                    if(cuenta == 5){
+                        continue;   // omite el resto del código del ciclo sólo si cuenta == 5
+                    }
+                    document.writeln(cuenta+ " ");
+                }                
+                document.writeln("<p>Se usó continue para no imprimir el 5</p>");
+
+           </script>
+        </article>
+
+        <section class="botones">
+            <a href="Ejemplo8_7.html">
+                <label>
+                    <input type="submit" name="anterior" class="anterior" value="Anterior"/>
+                </label>
+            </a>
+            <a href="Ejemplo8_8.html">
+                <label>
+                    <input type="submit" name="inicio" class="inicio" value="Inicio">
+                </label>
+            </a>
+            <a href="../Ejercicios/Ejercicio8_1.html">
+                <label>
+                    <input type="submit" name="siguiente" class="siguiente" value="Siguiente">
+                </label>
+            </a>
+        </section>
+    </body>
+</html>

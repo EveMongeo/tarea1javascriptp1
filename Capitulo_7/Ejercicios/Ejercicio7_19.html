@@ -1,0 +1,84 @@
+<!-- Montero Gómez Evelin -->
+<!-- Programación Web -->
+<!DOCTYPE html>
+
+<!-- Ejercicio 7.19: Cuestionario  -->
+
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejercicio 7.19</title>
+        <link rel="stylesheet" href="../../styles/styles-ejer.css">
+        <!-- Fuente -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Clicker+Script&display=swap" rel="stylesheet">
+
+    </head>
+    <body>
+
+        <!-- Banner -->
+    <header class="banner">
+        <a href="../../index.html">
+            <label>
+                <input type="submit" name="regresar" class="boton-indice" value="Regresar">
+            </label>
+        </a>
+        <h1 id="titulo">Capítulo 7: Ejercicios</h1>
+        <p id="parrafo">
+            <strong>
+                < Ejercicio 7.19 />
+            </strong>
+        </p>
+        <h2 id="nombre">Montero G&oacute;mez Evelin</h2>
+        <!-- Botón direccionador a índice -->
+    </header>
+
+    <header class="encabezado">
+        <h1 id="encabezado">Salidas de código</h1>
+    </header>
+
+        <!-- Contenedor -->
+        <article class="contenedor">
+            <p><em><i>(Problema del else resuelto)</i></em> Determine la salida de cada uno 
+                de los siguientes segmentos de código, cuando x es 9 & y es 11, y cuando 
+                x es 11 & y es 9. Observe que el intérprete ingnora la sangría en una 
+                secuencia de comandos. Además, el interrete de JavaScript siempre aocia un 
+                else con el if anterior, a menos que indique de otra forma mediante la 
+                colocación de llaves ( {} ).</p>
+            <img src="../../Images/captura7_19.png" alt="codigo">
+            <p>
+                <strong>a) Cuando x = 9 & y = 11: </strong> En este caso ambas condiciones son cumplidas ya que 9 es menor 
+                que 10 y 11 es mayor que 11, por lo que se debería imprir únicamente la línea que está despues del segundo if.
+                <br>
+                <strong>a) Cuando x = 11 & y = 9: </strong> En este segundo caso sucede que ninguna de las condiciones en es 
+                cumplida, por lo que salta al else y debería escribir las dos líneas de "document.writeln("...")".
+                <br>
+                <strong>b) Cuando x = 9 & y = 11: </strong>En este caso la primer condicioón es cierta por lo cual pasa al if 
+                anidado el cual también se cumple porque 11 es mayor que 10, así que se imprimer la línea dentro del segundo if.
+                <br>
+                <strong>b) Cuando x = 11 & y = 9: </strong>No se cumple ninguna condicion, ya que x es mayor a 11 y el acceso 
+                para el segundo if si se cumple la condicion principal, por lo tanto salta al else e imprime las dos líneas.
+            </p>
+        </article>
+
+        <section class="botones">
+            <a href="Ejercicio7_18.html">
+                <label>
+                    <input type="submit" name="anterior" class="anterior" value="Anterior"/>
+                </label>
+            </a>
+            <a href="Ejercicio7_19.html">
+                <label>
+                    <input type="submit" name="inicio" class="inicio" value="Inicio">
+                </label>
+            </a>
+            <a href="Ejercicio7_20.html">
+                <label>
+                    <input type="submit" name="siguiente" class="siguiente" value="Siguiente">
+                </label>
+            </a>
+        </section>
+    </body>
+</html>

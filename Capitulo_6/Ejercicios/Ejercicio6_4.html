@@ -1,0 +1,92 @@
+<!-- Montero Gómez Evelin -->
+<!-- Programación Web -->
+<!DOCTYPE html>
+
+<!-- Ejercicio 6.4: Corección de errores -->
+<!-- Ejercicios de autoevaluación -->
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejercicio 6.4</title>
+        <link rel="stylesheet" href="../../styles/styles-ejer.css">
+        <!-- Fuente -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Clicker+Script&display=swap" rel="stylesheet">
+
+    </head>
+
+    <body>
+
+        <!-- Banner -->
+    <header class="banner">
+        <a href="../../index.html">
+            <label>
+                <input type="submit" name="regresar" class="boton-indice" value="Regresar">
+            </label>
+        </a>
+        <h1 id="titulo">Cap&iacute;tulo 6: Ejercicios</h1>
+        <p id="parrafo">
+            <strong>
+                < Ejercicio 6.4 />
+            </strong>
+        </p>
+        <h2 id="nombre">Montero G&oacute;mez Evelin</h2>
+        <!-- Botón direccionador a índice -->
+    </header>
+
+        <!-- Contenedor -->
+        <article class="contenedor">
+            <h4>Identifique y corrija los errores en cada una de las siguientes instrucciones</h4>
+            <!-- Lista con errores -->
+            <ol type="a">
+                <!-- a) -->
+                <li>
+                    if(c < 7); <br>
+                        window.alert("c es menor que 7.");
+                </li>
+
+                <!-- b) -->
+                <li>
+                    if(c => 7) <br>
+                        window.alert("c es igual o mayor que 7.");
+                </li>
+            </ol>
+            <h4>Correcciones</h4>
+            <!-- Lista corregida -->
+            <ol type="a">
+                <!-- a) -->
+                <li>
+                    if(c < 7) <mark>;</mark> <br>
+                        window.alert("c es menor que 7."); <br>
+                    <u><em>La instrucción no puede ejecutarse si se coloca el <b>;</b> inmediatamente después del paréntesis del condicional.</em></u>
+                </li>
+                <!-- b) -->
+                <li>
+                    if(c <mark>=></mark> 7) <br>
+                        window.alert("c es igual o mayor que 7."); <br>
+                    <u><em>El orden de los operadores relacionales está invertido. La instrucción no va a ejecutarse correctamente.</em></u>
+                </li>
+            </ol>
+        </article>
+
+        <section class="botones">
+            <a href="Ejercicio6_3.html">
+                <label>
+                    <input type="submit" name="anterior" class="anterior" value="Anterior"/>
+                </label>
+            </a>
+            <a href="Ejercicio6_4.html">
+                <label>
+                    <input type="submit" name="inicio" class="inicio" value="Inicio">
+                </label>
+            </a>
+            <a href="Ejercicio6_5.html">
+                <label>
+                    <input type="submit" name="siguiente" class="siguiente" value="Siguiente">
+                </label>
+            </a>
+        </section>
+    </body>
+</html>

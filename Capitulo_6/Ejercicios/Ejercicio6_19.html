@@ -1,0 +1,78 @@
+<!-- Montero Gómez Evelin -->
+<!-- Programación Web -->
+<!DOCTYPE html>
+
+<!-- Ejercicio 6.19: Cuestionario -->
+<!-- Ejercicios de autoevaluación -->
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejercicio 6.19</title>
+        <link rel="stylesheet" href="../../styles/styles-ejer.css">
+        <!-- Fuente -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Clicker+Script&display=swap" rel="stylesheet">
+
+    </head>
+
+    <body>
+
+        <!-- Banner -->
+    <header class="banner">
+        <a href="../../index.html">
+            <label>
+                <input type="submit" name="regresar" class="boton-indice" value="Regresar">
+            </label>
+        </a>
+        <h1 id="titulo">Cap&iacute;tulo 6: Ejercicios</h1>
+        <p id="parrafo">
+            <strong>
+                < Ejercicio 6.19 />
+            </strong>
+        </p>
+        <h2 id="nombre">Montero G&oacute;mez Evelin</h2>
+        <!-- Botón direccionador a índice -->
+    </header>
+    
+    <header class="encabezado">
+        <h1 id="encabezado">Radio de un círculo</h1>
+    </header>
+
+        <!-- Contenedor -->
+        <article class="contenedor">
+        <p>Escriba una secuencia de comandos que obtenga del usuario el radio 
+           del círculo y produzca texto de HTML5 que muestre el diámetro, la circunferencia y el área de ese círculo.</p>
+        <script>
+            let radio = parseInt(window.prompt("Escribe el radio del círculo", 0));
+            let diametro = radio * 2;
+            let circunferencia = diametro * 3.14159;
+            let area = 3.14159 * radio ** 2;
+
+            document.write("<p><b>Radio</b>: " + radio + ".</p>");
+            document.write("<p><b>Diámetro</b>: " + diametro + ".</p>");
+            document.write("<p><b>Circunferencia</b>: " + circunferencia + ".</p>");
+            document.write("<p><b>Area</b>: " + area + ".</p>");
+        </script>
+        </article>
+
+        <section class="botones">
+            <a href="Ejercicio6_18.html">
+                <label>
+                    <input type="submit" name="anterior" class="anterior" value="Anterior"/>
+                </label>
+            </a>
+            <a href="Ejercicio6_19.html">
+                <label>
+                    <input type="submit" name="inicio" class="inicio" value="Inicio">
+                </label>
+            </a>
+            <a href="Ejercicio6_20.html">
+                <label>
+                    <input type="submit" name="siguiente" class="siguiente" value="Siguiente">
+                </label>
+            </a>
+        </section>
+    </body>
+</html>

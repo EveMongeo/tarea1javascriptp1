@@ -1,0 +1,86 @@
+<!-- Montero Gómez Evelin -->
+<!-- Programación Web -->
+<!DOCTYPE html>
+
+<!-- Ejercicio 7.2 -->
+
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejercicio 7.2</title>
+        <link rel="stylesheet" href="../../styles/styles-ejer.css">
+        <!-- Fuente -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Clicker+Script&display=swap" rel="stylesheet">
+
+    </head>
+    <style type="text/css">
+        ul{
+            list-style: none;
+        }
+    </style>
+
+    <body>
+
+        <!-- Banner -->
+    <header class="banner">
+        <a href="../../index.html">
+            <label>
+                <input type="submit" name="regresar" class="boton-indice" value="Regresar">
+            </label>
+        </a>
+        <h1 id="titulo">Capítulo 7: Ejemplos</h1>
+        <p id="parrafo">
+            <strong>
+                < Ejercicio 7.2 />
+            </strong>
+        </p>
+        <h2 id="nombre">Montero G&oacute;mez Evelin</h2>
+        <!-- Botón direccionador a índice -->
+    </header>
+    
+    <header class="encabezado">
+        <h1 id="encabezado">Suma de uno</h1>
+    </header>
+
+        <!-- Contenedor -->
+        <article class="contenedor">
+            <p>Escriba cuatro instrucciones en JavaScript que sumen 1, cada una, a la variable x, que contiene un n&uacute;mero.</p>
+            <script>
+                /* variables */
+                let x;
+                 
+                x = x + 1;
+                x += 1;
+                ++x;
+                x++;                
+
+                /* escribir en el documento de HTML5 */
+                document.writeln("<h4> x = x + 1;</h4>");
+                document.writeln("<h4> x += 1;</h4>");
+                document.writeln("<h4> ++x;</h4>");
+                document.writeln("<h4> x++;</h4>");
+            </script>
+        </article>
+
+        <section class="botones">
+            <a href="Ejercicio7_1.html">
+                <label>
+                    <input type="submit" name="anterior" class="anterior" value="Anterior"/>
+                </label>
+            </a>
+            <a href="Ejercicio7_2.html">
+                <label>
+                    <input type="submit" name="inicio" class="inicio" value="Inicio">
+                </label>
+            </a>
+            <a href="Ejercicio7_3.html">
+                <label>
+                    <input type="submit" name="siguiente" class="siguiente" value="Siguiente">
+                </label>
+            </a>
+        </section>
+    </body>
+</html>

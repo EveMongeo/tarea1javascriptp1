@@ -1,0 +1,77 @@
+<!-- Montero Gómez Evelin -->
+<!-- Programación Web -->
+<!DOCTYPE html>
+
+<!-- Fig. 8.7: Ejemplo8_7.html -->
+<!-- Uso de la instruccion break en una instrucción for. -->
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejemplo 8.7</title>
+        <link rel="stylesheet" href="../../styles/styles-ejer.css">
+        <!-- Fuente -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Clicker+Script&display=swap" rel="stylesheet">
+
+    </head>
+
+    <body>
+
+        <!-- Banner -->
+    <header class="banner">
+        <a href="../../index.html">
+            <label>
+                <input type="submit" name="regresar" class="boton-indice" value="Regresar">
+            </label>
+        </a>
+        <h1 id="titulo">Capítulo 8: Ejemplos</h1>
+        <p id="parrafo">
+            <strong>
+                < Ejemplo 8.7 />
+            </strong>
+        </p>
+        <h2 id="nombre">Montero G&oacute;mez Evelin</h2>
+        <!-- Botón direccionador a índice -->
+    </header>
+    
+    <header class="encabezado">
+        <h1 id="encabezado">Uso de la instruccion break en una instrucción for</h1>
+    </header>
+
+        <!-- Contenedor -->
+        <article class="contenedor">       
+            <script>
+                
+                for(var cuenta = 1; cuenta <= 10; ++cuenta){
+                    if(cuenta == 5){
+                        break;
+                    }
+                    document.writeln(cuenta+ " ");
+                }   // fin de for
+
+                document.writeln("<p>Se interrumpió el ciclo en cuenta = "+cuenta+"</p>");
+                
+           </script>
+        </article>
+
+        <section class="botones">
+            <a href="Ejemplo8_6.html">
+                <label>
+                    <input type="submit" name="anterior" class="anterior" value="Anterior"/>
+                </label>
+            </a>
+            <a href="Ejemplo8_7.html">
+                <label>
+                    <input type="submit" name="inicio" class="inicio" value="Inicio">
+                </label>
+            </a>
+            <a href="Ejemplo8_8.html">
+                <label>
+                    <input type="submit" name="siguiente" class="siguiente" value="Siguiente">
+                </label>
+            </a>
+        </section>
+    </body>
+</html>

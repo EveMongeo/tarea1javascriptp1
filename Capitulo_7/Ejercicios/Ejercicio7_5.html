@@ -1,0 +1,82 @@
+<!-- Montero Gómez Evelin -->
+<!-- Programación Web -->
+<!DOCTYPE html>
+
+<!-- Ejercicio 7.5: Cuestionario  -->
+
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejercicio 7.5</title>
+        <link rel="stylesheet" href="../../styles/styles-ejer.css">
+        <!-- Fuente -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Clicker+Script&display=swap" rel="stylesheet">
+
+    </head>
+
+    <body>
+
+        <!-- Banner -->
+    <header class="banner">
+        <a href="../../index.html">
+            <label>
+                <input type="submit" name="regresar" class="boton-indice" value="Regresar">
+            </label>
+        </a>
+        <h1 id="titulo">Capítulo 7: Ejercicios</h1>
+        <p id="parrafo">
+            <strong>
+                < Ejercicio 7.5 />
+            </strong>
+        </p>
+        <h2 id="nombre">Montero G&oacute;mez Evelin</h2>
+        <!-- Botón direccionador a índice -->
+    </header>
+    
+    <header class="encabezado">
+        <h1 id="encabezado">Escribir instrucciones de código</h1>
+    </header>
+
+        <!-- Contenedor -->
+        <article class="contenedor">
+            <p>
+                Combine las instrucciones que escribió en el ejercicio 7.4 para formar una secuencia de comandos que calcule e 
+                imprima la suma de los enteros del 1 al 10. Us la instrucción while para iterear a través de las instrucciones de 
+                cálculo e incremento. El ciclo debe terminar cuando x sea igual a 11.
+            </p>
+
+            <script>
+                /* variables */
+               let suma = 0;    
+               let x = 1;
+               
+               while(x <= 10){
+                suma += x;
+                ++x;
+               }
+                document.writeln("<h4>La suma es: "+ suma+" </h4>");
+            </script>
+        </article>
+
+        <section class="botones">
+            <a href="Ejercicio7_4.html">
+                <label>
+                    <input type="submit" name="anterior" class="anterior" value="Anterior"/>
+                </label>
+            </a>
+            <a href="Ejercicio7_5.html">
+                <label>
+                    <input type="submit" name="inicio" class="inicio" value="Inicio">
+                </label>
+            </a>
+            <a href="Ejercicio7_6.html">
+                <label>
+                    <input type="submit" name="siguiente" class="siguiente" value="Siguiente">
+                </label>
+            </a>
+        </section>
+    </body>
+</html>

@@ -1,0 +1,151 @@
+<!-- Montero Gómez Evelin -->
+<!-- Programación Web -->
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejercicio 8.12</title>
+        <link rel="stylesheet" href="../../styles/styles-ejer.css">
+        <!-- Fuente -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Clicker+Script&display=swap" rel="stylesheet">
+    </head>
+    <style type="text/css">
+        ul{
+            list-style: none;
+        }
+    </style>
+    <body>
+
+        <!-- Banner -->
+    <header class="banner">
+        <a href="../../index.html">
+            <label>
+                <input type="submit" name="regresar" class="boton-indice" value="Regresar">
+            </label>
+        </a>
+        <h1 id="titulo">Capítulo 8: Ejercicios</h1>
+        <p id="parrafo">
+            <strong>
+                < Ejercicio 8.12 />
+            </strong>
+        </p>
+        <h2 id="nombre">Montero G&oacute;mez Evelin</h2>
+        <!-- Botón direccionador a índice -->
+    </header>
+    
+    <header class="encabezado">
+        <h1 id="encabezado">Cuestionario</h1>
+    </header>
+
+        <!-- Contenedor -->
+        <article class="contenedor">
+            <p>
+                <b>
+                    Suponga que <code>i = 1, j = 2, k = 3 y m = 2.</code> ¿Qué es lo que imprime cada una de las 
+                    siguientes instrucciones? ¿Son necesarios los paréntesis en cada caso?
+                </b>
+            </p>
+            <ul>
+                <!-- a -->
+                <li>
+                    <p>
+                        <strong>a)</strong> <code>document.writeln( i == 1 );</code>
+                    </p>
+                    <ul>
+                        <li>Al ser una comparación lógica, el resultado es "true" porque esta cuestionando si el valor de i es igual a 1, lo cual es cierto. Es necesario usar parentesis porque la función del objeto document con su propiedad writeln los usan de manera obligatoria.</li>
+                    </ul>
+                </li>
+                
+               <hr>
+                <!-- b -->
+                <li>
+                    <p>
+                        <strong>b)</strong> <code>document.writeln( j == 3 );</code>
+                    </p>
+                    <ul>
+                        <li>Imprimer un "false", el valor de j es 2 no 3 por lo cual la comparación es falsa. Es necesario usar parentesis porque la función del objeto document con su propiedad writeln los usan de manera obligatoria.</li>
+                    </ul>    
+                </li>
+               
+                <hr>
+                <!-- c -->
+                <li>
+                    <p>
+                        <strong>c)</strong> <code>document.writeln( i >= 1 && j < 4 );</code>
+                    </p>
+                    <ul>
+                        <li>Imprime "true", debido a que las dos condiciones son verdaderas, ya que i es igual 1 y j es menor a 4.  Es necesario usar parentesis porque la función del objeto document con su propiedad writeln los usan de manera obligatoria.</li>
+                    </ul>
+                </li>
+                
+                <hr>
+                <!-- d -->
+                <li>
+                    <p>
+                        <strong>d)</strong> <code>document.writeln( m <= 99 && k < m );</code>
+                    </p>
+                    <ul>
+                        <li>Imprime "false" ya que k no es menor a m. No es necesario poner parentesis en cada condición, pero sería bueno hacerlo para evitar confuciones en caso de que existan más condiciones o que las comparaciones sean más complejas y extensas.</li>
+                    </ul>
+                </li>
+                
+                <hr>
+                <!-- e -->
+                <li>
+                    <p>
+                        <strong>e)</strong> <code>document.writeln( j >= i || k == m );</code>
+                    </p>
+                    <ul>
+                        <li>Imprime "true", ya que ambas condiciones son verdaderas, j si es mayor a i y k tiene el mismo valor que m.  No es necesario poner parentesis en cada condición, pero sería bueno hacerlo para evitar confuciones en caso de que existan más condiciones o que las comparaciones sean más complejas y extensas.</li>
+                    </ul>
+                </li>
+                
+                <hr>
+                <!-- f -->
+                <li>
+                    <p>
+                        <strong>f)</strong> <code>document.writeln( k + m < j || k == m );</code>
+                    </p>
+                    <ul>
+                        <li>Imprime "false", en este caso la suma de k y m es 5 y j vale 2, así que la comparación de 5 < 2 da cómo falso y en la segunada es falsa igualmente, ya que k y m no tienen el mismo valor.  No es necesario poner parentesis en cada condición, pero sería bueno hacerlo para evitar confuciones en caso de que existan más condiciones o que las comparaciones sean más complejas y extensas.</li>
+                    </ul>
+                </li>
+                
+                <hr>
+                <!-- g -->
+                <li>
+                    <p>
+                        <strong>g)</strong> <code>document.writeln( !( k > m ) );</code>
+                    </p>
+                    <ul>
+                        <li>Imprime "false", esto porque k si es mayor a m, pero esta condición se ebcuntra negada con !, por lo que devuelve un "false". En este caso si es necesario usar parentesis para hacer la negación con !.</li>
+                    </ul>
+                </li>
+                
+                
+            </ul>
+            
+        </article>
+
+        <section class="botones">
+            <a href="Ejercicio8_11.html">
+                <label>
+                    <input type="submit" name="anterior" class="anterior" value="Anterior"/>
+                </label>
+            </a>
+            <a href="Ejercicio8_12.html">
+                <label>
+                    <input type="submit" name="inicio" class="inicio" value="Inicio">
+                </label>
+            </a>
+            <a href="Ejercicio8_13.html">
+                <label>
+                    <input type="submit" name="siguiente" class="siguiente" value="Siguiente">
+                </label>
+            </a>
+        </section>
+    </body>
+</html>

@@ -1,0 +1,101 @@
+<!-- Montero Gómez Evelin -->
+<!-- Programación Web -->
+<!DOCTYPE html>
+
+<!-- Ejercicio 7.17: Cuestionario  -->
+
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejercicio 7.17</title>
+        <link rel="stylesheet" href="../../styles/styles-ejer.css">
+        <!-- Fuente -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Clicker+Script&display=swap" rel="stylesheet">
+
+    </head>
+    <body>
+
+        <!-- Banner -->
+    <header class="banner">
+        <a href="../../index.html">
+            <label>
+                <input type="submit" name="regresar" class="boton-indice" value="Regresar">
+            </label>
+        </a>
+        <h1 id="titulo">Capítulo 7: Ejercicios</h1>
+        <p id="parrafo">
+            <strong>
+                < Ejercicio 7.17 />
+            </strong>
+        </p>
+        <h2 id="nombre">Montero G&oacute;mez Evelin</h2>
+        <!-- Botón direccionador a índice -->
+    </header>
+
+    <header class="encabezado">
+        <h1 id="encabezado">Dos valores más grandes</h1>
+    </header>
+
+        <!-- Contenedor -->
+        <article class="contenedor">
+            <p>
+                Utilizando una metodológia similar a la del ejercicio 7.15, encuentre 
+                los dos valores más grandes de los 10 que se introdujeron.
+            </p>
+            
+            
+            <script>
+                /* variables */
+                let contadorNumerosGrandes = 1;
+                let ingresadoNumero = 0;
+
+                let mayorNumero = 0;
+                let segundoMayor = 0 ;
+                let menorNumero = 0;
+
+
+                while(contadorNumerosGrandes <= 10){
+                    ingresadoNumero = window.prompt("Ingresa un número entero: ");
+
+                    //validamos si el numero es mayor, si es mayor se actuliza y se manda el mayor anterior al segundo
+                    if(ingresadoNumero > mayorNumero){
+                        segundoMayor = mayorNumero;
+                        mayorNumero = ingresadoNumero;
+                    }
+                    // validamos si el numero ingresado es mayor que el segundo, si es así se sustituye
+                    else if(ingresadoNumero > segundoMayor){
+                        segundoMayor = ingresadoNumero;
+                    }
+                    // validamos si el numero ingresado es menor que el numero anterior 
+                    if(ingresadoNumero < menorNumero){
+                        menorNumero = ingresadoNumero;
+                    }
+                    contadorNumerosGrandes++;
+                }
+                document.writeln("Mayor: "+mayorNumero+"<br>");
+                document.writeln("Segundo Mayor: "+segundoMayor+"<br>");
+            </script>
+        </article>
+
+        <section class="botones">
+            <a href="Ejercicio7_16.html">
+                <label>
+                    <input type="submit" name="anterior" class="anterior" value="Anterior"/>
+                </label>
+            </a>
+            <a href="Ejercicio7_17.html">
+                <label>
+                    <input type="submit" name="inicio" class="inicio" value="Inicio">
+                </label>
+            </a>
+            <a href="Ejercicio7_18.html">
+                <label>
+                    <input type="submit" name="siguiente" class="siguiente" value="Siguiente">
+                </label>
+            </a>
+        </section>
+    </body>
+</html>

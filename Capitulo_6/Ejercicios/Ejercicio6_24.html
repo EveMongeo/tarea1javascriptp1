@@ -1,0 +1,115 @@
+<!-- Montero Gómez Evelin -->
+<!-- Programación Web -->
+<!DOCTYPE html>
+
+<!-- Ejercicio 6.24 -->
+<!-- Ejercicios de autoevaluación -->
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejercicio 6.24</title>
+        <link rel="stylesheet" href="../../styles/styles-ejer.css">
+        <!-- Fuente -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Clicker+Script&display=swap" rel="stylesheet">
+
+    </head>
+
+    <body>
+
+        <!-- Banner -->
+    <header class="banner">
+        <a href="../../index.html">
+            <label>
+                <input type="submit" name="regresar" class="boton-indice" value="Regresar">
+            </label>
+        </a>
+        <h1 id="titulo">Cap&iacute;tulo 6: Ejercicios</h1>
+        <p id="parrafo">
+            <strong>
+                < Ejercicio 6.24 />
+            </strong>
+        </p>
+        <h2 id="nombre">Montero G&oacute;mez Evelin</h2>
+        <!-- Botón direccionador a índice -->
+    </header>
+    
+    <header class="encabezado">
+        <h1 id="encabezado">Cuadrados y cubos</h1>
+    </header>
+
+        <!-- Contenedor -->
+        <article class="contenedor">
+        <p>Escriba una secuencia de comandos que calcule los cuadrados y cubos de los números del 0 al 5 y 
+           produzca texto de HTML5 que muestre los valores resultantes en un formato de tabla HTML5.</p>
+        
+        <!-- Programación -->
+        <script>
+            /* variables */
+            let n0 = 0,n1 = 1,n2 = 2,n3 = 3,n4 = 4,n5 = 5;
+            let n0_cuadrado,n1_cuadrado,n2_cuadrado,n3_cuadrado,n4_cuadrado ,n5_cuadrado;
+            let n0_cubo,n1_cubo,n2_cubo,n3_cubo,n4_cubo,n5_cubo;
+            let numeros;
+            /* convertir a enteros */
+            n0 = parseInt(n0);
+            n1 = parseInt(n1);
+            n2 = parseInt(n2);
+            n3 = parseInt(n3);
+            n4 = parseInt(n4);
+            n5 = parseInt(n5);
+        
+            /* cuadrado */
+            n0_cuadrado = n0 ** 2;
+            n1_cuadrado = n1 ** 2;
+            n2_cuadrado = n2 ** 2;
+            n3_cuadrado = n3 ** 2;
+            n4_cuadrado = n4 ** 2;
+            n5_cuadrado = n5 ** 2;
+
+            /* Cubo */
+            n0_cubo = n0 ** 3;
+            n1_cubo = n1 ** 3;
+            n2_cubo = n2 ** 3;
+            n3_cubo = n3 ** 3;
+            n4_cubo = n4 ** 3;
+            n5_cubo = n5 ** 3;
+            
+            /*Mostrar en consola*/
+            console.log(n0_cuadrado);
+            console.log(n1_cuadrado);
+            console.log(n2_cuadrado);
+            console.log(n3_cuadrado);
+            console.log(n4_cuadrado);
+            console.log(n5_cuadrado);
+            
+            console.log(n0_cubo);
+            console.log(n1_cubo);
+            console.log(n2_cubo);
+            console.log(n3_cubo);
+            console.log(n4_cubo);
+            console.log(n5_cubo);
+        </script>
+        
+        </article>
+
+        <section class="botones">
+            <a href="Ejercicio6_23.html">
+                <label>
+                    <input type="submit" name="anterior" class="anterior" value="Anterior"/>
+                </label>
+            </a>
+            <a href="Ejercicio6_24.html">
+                <label>
+                    <input type="submit" name="inicio" class="inicio" value="Inicio">
+                </label>
+            </a>
+            <a href="../../Capitulo_7/Ejemplos/Ejemplo7_7.html">
+                <label>
+                    <input type="submit" name="siguiente" class="siguiente" value="Siguiente">
+                </label>
+            </a>
+        </section>
+    </body>
+</html>

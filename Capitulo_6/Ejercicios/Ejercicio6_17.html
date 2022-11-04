@@ -1,0 +1,76 @@
+<!-- Montero Gómez Evelin -->
+<!-- Programación Web -->
+<!DOCTYPE html>
+
+<!-- Ejercicio 6.17: Cuestionario -->
+<!-- Ejercicios de autoevaluación -->
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejercicio 6.17</title>
+        <link rel="stylesheet" href="../../styles/styles-ejer.css">
+        <!-- Fuente -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Clicker+Script&display=swap" rel="stylesheet">
+
+    </head>
+
+    <body>
+
+        <!-- Banner -->
+    <header class="banner">
+        <a href="../../index.html">
+            <label>
+                <input type="submit" name="regresar" class="boton-indice" value="Regresar">
+            </label>
+        </a>
+        <h1 id="titulo">Cap&iacute;tulo 6: Ejercicios</h1>
+        <p id="parrafo">
+            <strong>
+                < Ejercicio 6.17 />
+            </strong>
+        </p>
+        <h2 id="nombre">Montero G&oacute;mez Evelin</h2>
+        <!-- Botón direccionador a índice -->
+    </header>
+
+        <!-- Contenedor -->
+        <article class="contenedor">
+        <h4>Escriba una secuencia de comandos que pida al usuario que escriba dos enteros, obtenga los dos números del 
+            usuario y produzca texto que muestre el número más grande seguido de las palabras "es mayor que" en un diálogo
+            de alerta. Si los números son iguales, imprima texto de HTML5 que muestre el mensaje "Estos números son iguales".
+            Use las técnicas que se muestran en la figura 6.14.
+        </h4>
+        <script>
+            a = parseInt(window.prompt("Introduzca dos enteros", 0));
+            b = parseInt(window.prompt("", 0));
+            if(a > b)
+            document.writeln(a + " es mayor que " + b + ".");
+            if(a < b)
+            document.writeln(a + " es menor que " + b + ".");
+            if(a == b)
+            document.writeln(a + " es igual que " + b + ".");
+        </script>
+        </article>
+
+        <section class="botones">
+            <a href="Ejercicio6_16.html">
+                <label>
+                    <input type="submit" name="anterior" class="anterior" value="Anterior"/>
+                </label>
+            </a>
+            <a href="Ejercicio6_17.html">
+                <label>
+                    <input type="submit" name="inicio" class="inicio" value="Inicio">
+                </label>
+            </a>
+            <a href="Ejercicio6_18.html">
+                <label>
+                    <input type="submit" name="siguiente" class="siguiente" value="Siguiente">
+                </label>
+            </a>
+        </section>
+    </body>
+</html>

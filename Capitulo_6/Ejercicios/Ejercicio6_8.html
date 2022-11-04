@@ -1,0 +1,88 @@
+<!-- Montero Gómez Evelin -->
+<!-- Programación Web -->
+<!DOCTYPE html>
+
+<!-- Ejercicio 6.8: Instrucciones. -->
+<!-- Ejercicios de autoevaluación -->
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejercicio 6.8</title>
+        <link rel="stylesheet" href="../../styles/styles-ejer.css">
+        <!-- Fuente -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Clicker+Script&display=swap" rel="stylesheet">
+
+    </head>
+
+    <body>
+
+        <!-- Banner -->
+    <header class="banner">
+        <a href="../../index.html">
+            <label>
+                <input type="submit" name="regresar" class="boton-indice" value="Regresar">
+            </label>
+        </a>
+        <h1 id="titulo">Cap&iacute;tulo 6: Ejercicios</h1>
+        <p id="parrafo">
+            <strong>
+                < Ejercicio 6.8 />
+            </strong>
+        </p>
+        <h2 id="nombre">Montero G&oacute;mez Evelin</h2>
+        <!-- Botón direccionador a índice -->
+    </header>
+
+    <script>
+        //Calcula el producto de 3 enteros.
+        var  a, b, c;
+        b = window.prompt("Escriba dos números");
+        c = window.prompt();
+
+        a = parseInt(b) * parseInt(c);
+        window.alert("El resultado es " + a + ".")
+
+    </script>    
+
+        <!-- Contenedor -->
+        <article class="contenedor">
+            <h4>Escriba una instrucción (o comentario) para realizar cada una de las siguientes tareas:</h4>
+           <!-- Incisos -->
+            <ol type="a">
+                <!-- a) -->
+                <li>Muestre el mensaje "Escriba dos números" usando el objeto window.</li>
+                <!-- b) -->
+                <li>Asigne el producto de las variables b y c a la variable a.</li>
+                <!-- c) -->
+                <li>Indique que una secuencia de comandos va a realizar un cálculo de nómina de ejemplo.</li>
+                
+           </ol>
+
+           <script>
+                document.writeln("<h4>Una secuencia de comandos va a realizar un cálculo de nómina de ejemplo.</h4>");
+           </script>
+
+        </article>
+
+        <section class="botones">
+            <a href="Ejercicio6_7.html">
+                <label>
+                    <input type="submit" name="anterior" class="anterior" value="Anterior"/>
+                </label>
+            </a>
+            <a href="Ejercicio6_8.html">
+                <label>
+                    <input type="submit" name="inicio" class="inicio" value="Inicio">
+                </label>
+            </a>
+            <a href="Ejercicio6_9.html">
+                <label>
+                    <input type="submit" name="siguiente" class="siguiente" value="Siguiente">
+                </label>
+            </a>
+        </section>
+    </body>
+</html>

@@ -1,0 +1,112 @@
+<!-- Montero Gómez Evelin -->
+<!-- Programación Web -->
+<!DOCTYPE html>
+
+<!-- Ejemplo 7.9: Ejemplo7_1.css  -->
+<!-- Repeticion controlada por contador para calcular el promedio de una clase. -->
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejemplo 7.9</title>
+        <link rel="stylesheet" href="../../styles/styles-ejer.css">
+        <!-- Fuente -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Clicker+Script&display=swap" rel="stylesheet">
+
+    </head>
+
+    <body>
+
+        <!-- Banner -->
+    <header class="banner">
+        <a href="../../index.html">
+            <label>
+                <input type="submit" name="regresar" class="boton-indice" value="Regresar">
+            </label>
+        </a>
+        <h1 id="titulo">Capítulo 7: Ejemplos</h1>
+        <p id="parrafo">
+            <strong>
+                < Ejemplo 7.9 />
+            </strong>
+        </p>
+        <h2 id="nombre">Montero G&oacute;mez Evelin</h2>
+        <!-- Botón direccionador a índice -->
+    </header>
+    
+    <header class="encabezado">
+        <h1 id="encabezado">Calificaciones</h1>
+    </header>
+
+        <!-- Contenedor -->
+        <article class="contenedor">
+        <p>Escriba una secuencia de comandos que calcule los cuadrados y cubos de los números del 0 al 5 y 
+           produzca texto de HTML5 que muestre los valores resultantes en un formato de tabla HTML5.</p>
+        
+        <!-- Programación -->
+        <script>
+            let total;                      // suma de calificaciones
+            let contadorCalificaciones;     // numero de calificaciones introducidas
+            let calificacion;               // calificacion escrita por el usuario (como una cadena)
+            let valorCalificacion;          // valor de la calificacion (convertido en entero)   
+            let promedio;                   // promedio de todas las calificaciones               
+
+            // Fase de inicializacion
+            total = 0;                      // borrar el total
+            contadorCalificaciones = 0;     // preparar para iterar
+
+            // Fase de procesamiento
+            // pedir la entrada y leer la calificacion del usuario
+            calificacion = window.prompt("Escriba la calificacion entera, -1 para salir: ", "0");
+            
+            // convertir calificion de cadena a entero
+            valorCalificacion = parseInt(calificacion);
+            
+            while(valorCalificacion != -1){
+                // sumar valorCalificacion al total
+                total += valorCalificacion;
+                
+                // sumar 1 a contadorCalificaciones
+                contadorCalificaciones = contadorCalificaciones + 1; 
+
+                // pedir la entrada y leer calificacion del usuario
+                calificacion = window.prompt("Escriba la calificacion entera, -1 para salir: ", "0");
+
+                // convertit calificacion de cadena a entero
+                valorCalificacion = parseInt(calificacion);
+            }   // fin de while
+
+            // Fase de terminacion
+            if(contadorCalificaciones != 0){
+                promedio = total / contadorCalificaciones;
+
+                // muestra el promedio de las calificaciones de los examenes
+                document.writeln("<h1>El promedio de la clase es: "+promedio+"</h1>");
+            }else{
+                document.writeln("<p>No se introdujeron calificaciones.</p>")
+            }
+        </script>
+        
+        </article>
+
+        <section class="botones">
+            <a href="Ejemplo7_7.html">
+                <label>
+                    <input type="submit" name="anterior" class="anterior" value="Anterior"/>
+                </label>
+            </a>
+            <a href="Ejemplo7_9.html">
+                <label>
+                    <input type="submit" name="inicio" class="inicio" value="Inicio">
+                </label>
+            </a>
+            <a href="Ejemplo7_11.html">
+                <label>
+                    <input type="submit" name="siguiente" class="siguiente" value="Siguiente">
+                </label>
+            </a>
+        </section>
+    </body>
+</html>

@@ -1,0 +1,116 @@
+<!-- Montero Gómez Evelin -->
+<!-- Programación Web -->
+<!DOCTYPE html>
+
+<!-- Ejercicio 6.23 -->
+<!-- Ejercicios de autoevaluación -->
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejercicio 6.23</title>
+        <link rel="stylesheet" href="../../styles/styles-ejer.css">
+        <!-- Fuente -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Clicker+Script&display=swap" rel="stylesheet">
+
+    </head>
+
+    <body>
+
+        <!-- Banner -->
+    <header class="banner">
+        <a href="../../index.html">
+            <label>
+                <input type="submit" name="regresar" class="boton-indice" value="Regresar">
+            </label>
+        </a>
+        <h1 id="titulo">Cap&iacute;tulo 6: Ejercicios</h1>
+        <p id="parrafo">
+            <strong>
+                < Ejercicio 6.23 />
+            </strong>
+        </p>
+        <h2 id="nombre">Montero G&oacute;mez Evelin</h2>
+        <!-- Botón direccionador a índice -->
+    </header>
+    
+    <header class="encabezado">
+        <h1 id="encabezado">Negativos, positivos y ceros</h1>
+    </header>
+
+        <!-- Contenedor -->
+        <article class="contenedor">
+        <p>Escriba una secuencia de comandos que reciba tres números, determine y produzca marcado de 
+            números negativos, positivos y cero introducidos.</p>
+        
+           <!-- Programación -->
+        <script>
+            /* variables */
+            let n1, n2, n3;
+
+            /* Llenado de las variables */
+            n1 = parseInt(window.prompt("Escribe el valor del primer número: "));
+            n2 = parseInt(window.prompt("Escribe el valor del segundo número: "));
+            n3 = parseInt(window.prompt("Escribe el valor del tercer número: "));
+
+            /* Variables para almacenar las cantidades de los numeros */
+            let contaPositivo = 0, contaNegativo = 0, contaCeros = 0;   //Contadores de los numeros
+            let numeros; 
+            let numAux = 0;
+
+            /* convertir a int */
+            contaPositivo = parseInt(contaPositivo);
+            contaNegativo = parseInt(contaNegativo);
+            contaCeros = parseInt(contaCeros);
+
+            /* pasamos los valores a una lista */
+            numeros = [n1,n2,n3]; 
+
+            for(i=0;i<3;i++){
+                /* postivos */
+                if(numeros[i] > 0){
+                    contaPositivo += 1;
+                }
+                /* negativos */
+                if(numeros[i] < 0){
+                    contaNegativo += 1;
+                }
+                /* ceros */
+                if(numeros[i] == 0){
+                    contaCeros += 1;
+                }
+            }
+            /* mostrar en consolar */
+            console.log("Cantidad de números positivos = " + contaPositivo);
+            console.log("Cantidad de números negativos = " + contaNegativo);
+            console.log("Cantidad de ceros = " + contaCeros);
+            /* mostrar en doc de HTML5 */
+            document.writeln("<p> <b>Números ingresados:</b> "+ numeros +"</p> <hr>");
+            document.writeln("<p><b>Cantidad de números positivos :</b> "+ contaPositivo +"</p>");
+            document.writeln("<p><b>Cantidad de números negativos :</b> "+ contaNegativo +"</p>");
+            document.writeln("<p><b>Cantidad de ceros :</b> "+ contaCeros +"</p>");
+        </script>
+        
+        </article>
+
+        <section class="botones">
+            <a href="Ejercicio6_22.html">
+                <label>
+                    <input type="submit" name="anterior" class="anterior" value="Anterior"/>
+                </label>
+            </a>
+            <a href="Ejercicio6_23.html">
+                <label>
+                    <input type="submit" name="inicio" class="inicio" value="Inicio">
+                </label>
+            </a>
+            <a href="Ejercicio6_24.html">
+                <label>
+                    <input type="submit" name="siguiente" class="siguiente" value="Siguiente">
+                </label>
+            </a>
+        </section>
+    </body>
+</html>

@@ -1,0 +1,101 @@
+<!-- Montero Gómez Evelin -->
+<!-- Programación Web -->
+<!DOCTYPE html>
+
+<!-- Ejercicio 6.19: Cuestionario -->
+<!-- Ejercicios de autoevaluación -->
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejercicio 6.20</title>
+        <link rel="stylesheet" href="../../styles/styles-ejer.css">
+        <!-- Fuente -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Clicker+Script&display=swap" rel="stylesheet">
+
+    </head>
+
+    <body>
+
+        <!-- Banner -->
+    <header class="banner">
+        <a href="../../index.html">
+            <label>
+                <input type="submit" name="regresar" class="boton-indice" value="Regresar">
+            </label>
+        </a>
+        <h1 id="titulo">Cap&iacute;tulo 6: Ejercicios</h1>
+        <p id="parrafo">
+            <strong>
+                < Ejercicio 6.20 />
+            </strong>
+        </p>
+        <h2 id="nombre">Montero G&oacute;mez Evelin</h2>
+        <!-- Botón direccionador a índice -->
+    </header>
+    
+    <header class="encabezado">
+        <h1 id="encabezado">Números de menor al mayor</h1>
+    </header>
+
+        <!-- Contenedor -->
+        <article class="contenedor">
+        <p>Escriba una secuencia de comandos que lea cinco enteros, 
+           determine y produzca marcado que muestre los enteros menor y mayor en el grupo.</p>
+        
+           <!-- Programación -->
+        <script>
+            /* variables */
+            let n1, n2, n3, n4, n5;
+            let vector;
+            /* Pedir numeros */
+            n1 = window.prompt("Ingresa el primer número: ");
+            n2 = window.prompt("Ingresa el segundo número: ");
+            n3 = window.prompt("Ingresa el tercer número: ");
+            n4 = window.prompt("Ingresa el cuarto número: ");
+            n5 = window.prompt("Ingresa el quinto número: ");
+    
+            /* convertir de cadena a entero */
+            n1 = parseInt(n1);
+            n2 = parseInt(n2);
+            n3 = parseInt(n3);
+            n4 = parseInt(n4);
+            n5 = parseInt(n5);
+
+            /* ordenar los números de menor a mayor */
+            vector = [n1,n2,n3,n4,n5];
+        
+            console.log(vector.sort());
+
+            document.writeln("<h4>Secuencia de números: </h4>")
+            document.writeln("<p> " + vector.sort() + ".</p>");
+            document.writeln("<h4>Número menor: </h4>")
+            document.writeln("<p> " + vector.sort()[0] + ".</p>");
+            document.writeln("<h4>Número mayor: </h4>")
+            document.writeln("<p> " + vector.sort()[4] + ".</p>");
+
+        </script>
+        
+        </article>
+
+        <section class="botones">
+            <a href="Ejercicio6_19.html">
+                <label>
+                    <input type="submit" name="anterior" class="anterior" value="Anterior"/>
+                </label>
+            </a>
+            <a href="Ejercicio6_20.html">
+                <label>
+                    <input type="submit" name="inicio" class="inicio" value="Inicio">
+                </label>
+            </a>
+            <a href="Ejercicio6_21.html">
+                <label>
+                    <input type="submit" name="siguiente" class="siguiente" value="Siguiente">
+                </label>
+            </a>
+        </section>
+    </body>
+</html>

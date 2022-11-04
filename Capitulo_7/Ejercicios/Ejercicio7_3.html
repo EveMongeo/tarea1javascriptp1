@@ -1,0 +1,121 @@
+<!-- Montero Gómez Evelin -->
+<!-- Programación Web -->
+<!DOCTYPE html>
+
+<!-- Ejercicio 7.3: Cuestionario  -->
+
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejercicio 7.3</title>
+        <link rel="stylesheet" href="../../styles/styles-ejer.css">
+        <!-- Fuente -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Clicker+Script&display=swap" rel="stylesheet">
+
+    </head>
+    <style type="text/css">
+        ul{
+            list-style: none;
+        }
+    </style>
+
+    <body>
+
+        <!-- Banner -->
+    <header class="banner">
+        <a href="../../index.html">
+            <label>
+                <input type="submit" name="regresar" class="boton-indice" value="Regresar">
+            </label>
+        </a>
+        <h1 id="titulo">Capítulo 7: Ejercicios</h1>
+        <p id="parrafo">
+            <strong>
+                < Ejercicio 7.3 />
+            </strong>
+        </p>
+        <h2 id="nombre">Montero G&oacute;mez Evelin</h2>
+        <!-- Botón direccionador a índice -->
+    </header>
+    
+    <header class="encabezado">
+        <h1 id="encabezado">Escribir instrucciones de código</h1>
+    </header>
+
+        <!-- Contenedor -->
+        <article class="contenedor">
+            <p>Escriba instrucciones en JavaScript para realizar cada una de las siguientes tareas:</p>
+             <!-- Cuestionario -->
+             <ul>
+                <!-- a -->
+                <li>
+                    <p>
+                        <strong>a)</strong> Asignar la suma de x & y a z, e incrementar el valor de x en 1 despu&eacute;s del c&aacute;lculo. Usar solo una instrucci&oacute;n.
+                        <br><u>z = x++ + y;</u>
+                    </p>
+                </li>
+                <!-- b -->
+                <li>
+                    <p>
+                        <strong>b)</strong> Evaluar si el valor de la variable cuenta es mayor que 10. De ser as&iacute;, imprimir "Cuanta es mayor que".
+                        <br><u>if (cuenta > 10){ <br>
+                            document.writeln(Cuenta es mayor que 10);
+                        }</u>
+                    </p>
+                </li>
+                <!-- c -->
+                <li>
+                    <p>
+                        <strong>c)</strong> Decrementar la variable x en 1, luego restarla a a variable total. Usar solo una instrucci&oacute;n.
+                        <br><u>total - = --x;</u>
+                    </p>
+                </li>
+                <!-- d -->
+                <li>
+                    <p>
+                        <strong>d)</strong> Calcular el residuo despu&eacute;s de dividir q entre divisoor y asignar el resultado a q.
+                        <br><u>q %= divisor;</u>
+                    </p>
+                </li>
+               
+            </ul>
+
+            <script>
+                /* variables */
+                let x, y, z, cuenta, q, divisor, total;
+                
+                /* a) */
+                z = x++ + y;
+                /* b) */
+                if (cuenta > 10){
+                    document.writeln("Cuenta es mayor que 10");
+                }
+                /* c) */
+                total -= --x;
+                /* d) */
+                q %= divisor; 
+            </script>
+        </article>
+
+        <section class="botones">
+            <a href="Ejercicio7_2.html">
+                <label>
+                    <input type="submit" name="anterior" class="anterior" value="Anterior"/>
+                </label>
+            </a>
+            <a href="Ejercicio7_3.html">
+                <label>
+                    <input type="submit" name="inicio" class="inicio" value="Inicio">
+                </label>
+            </a>
+            <a href="Ejercicio7_4.html">
+                <label>
+                    <input type="submit" name="siguiente" class="siguiente" value="Siguiente">
+                </label>
+            </a>
+        </section>
+    </body>
+</html>

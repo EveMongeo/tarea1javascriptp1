@@ -1,0 +1,92 @@
+<!-- Montero Gómez Evelin -->
+<!-- Programación Web -->
+<!DOCTYPE html>
+
+<!-- Fig. 8.2: Ejemplo8_4.html -->
+<!-- Cálculo de interés compuesto con la isntrucción for. -->
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejemplo 8.4</title>
+        <link rel="stylesheet" href="../../styles/styles-ejer.css">
+        <!-- Fuente -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Clicker+Script&display=swap" rel="stylesheet">
+
+    </head>
+
+    <body>
+
+        <!-- Banner -->
+    <header class="banner">
+        <a href="../../index.html">
+            <label>
+                <input type="submit" name="regresar" class="boton-indice" value="Regresar">
+            </label>
+        </a>
+        <h1 id="titulo">Capítulo 8: Ejemplos</h1>
+        <p id="parrafo">
+            <strong>
+                < Ejemplo 8.4 />
+            </strong>
+        </p>
+        <h2 id="nombre">Montero G&oacute;mez Evelin</h2>
+        <!-- Botón direccionador a índice -->
+    </header>
+    
+    <header class="encabezado">
+        <h1 id="encabezado">Cálculo de interés compuesto con la instrucción for</h1>
+    </header>
+
+        <!-- Contenedor -->
+        <article class="contenedor">       
+            <script>
+                let monto;                  // monto actual
+                let principal = 1000.00;    // monto principal
+                let tasa = 0.05;            // tasa de interés
+                let anio=0;
+
+                document.writeln("<table>");    // comenzar la tabla
+                document.writeln("<caption>Capítulo de interés compuesto</caption>");
+                document.writeln("<thead><tr><th>Año</th>");    //Encabezado de la columna del año
+                document.writeln("<th>Monto en deposito</th>");      // encabezado del monto
+                document.writeln("</tr></thead><tbody>");
+
+                // imprimir una fila de la tabla para cada año
+                for(let inicio = 1; anio <= 10; ++anio){
+                    monto = principal * Math.pow(1.0 + tasa, anio);
+                    if(anio % 2 !== 0){
+                        document.writeln("<tr class=filaimpar'><td>"+anio+"</td><td>" + monto.toFixed(2) + "</td></tr>")
+                    }else{
+                        document.writeln("<tr><td>"+anio+"</td><td>"+monto.toFixed(2)+"</td></tr>")
+                    } // fin del for
+                }
+
+                document.writeln("</tbody></table>")
+
+
+                
+           </script>
+        </article>
+
+        <section class="botones">
+            <a href="Ejemplo8_3.html">
+                <label>
+                    <input type="submit" name="anterior" class="anterior" value="Anterior"/>
+                </label>
+            </a>
+            <a href="Ejemplo8_4.html">
+                <label>
+                    <input type="submit" name="inicio" class="inicio" value="Inicio">
+                </label>
+            </a>
+            <a href="Ejemplo8_5.html">
+                <label>
+                    <input type="submit" name="siguiente" class="siguiente" value="Siguiente">
+                </label>
+            </a>
+        </section>
+    </body>
+</html>

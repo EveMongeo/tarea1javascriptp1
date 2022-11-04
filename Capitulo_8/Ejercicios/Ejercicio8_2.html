@@ -1,0 +1,154 @@
+<!-- Montero Gómez Evelin -->
+<!-- Programación Web -->
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejercicio 8.2</title>
+        <link rel="stylesheet" href="../../styles/styles-ejer.css">
+        <!-- Fuente -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Clicker+Script&display=swap" rel="stylesheet">
+    </head>
+
+    <style type="text/css">
+        ul{
+            list-style: none;
+        }
+    </style>
+
+    <body>
+
+        <!-- Banner -->
+    <header class="banner">
+        <a href="../../index.html">
+            <label>
+                <input type="submit" name="regresar" class="boton-indice" value="Regresar">
+            </label>
+        </a>
+        <h1 id="titulo">Capítulo 8: Ejercicios</h1>
+        <p id="parrafo">
+            <strong>
+                < Ejercicio 8.2 />
+            </strong>
+        </p>
+        <h2 id="nombre">Montero G&oacute;mez Evelin</h2>
+        <!-- Botón direccionador a índice -->
+    </header>
+    
+    <header class="encabezado">
+        <h1 id="encabezado">Cuestionario</h1>
+    </header>
+
+        <!-- Contenedor -->
+        <article class="contenedor">       
+            <p>Escriba una instracción o un conjunto de instrucciones en JavaScript para realizar cada una de las siguientes tareas.</p>
+            <ul>
+                <!-- a -->
+                <li>
+                    <p>
+                        <strong>a)</strong> Sumar los impares entre 1 y 99. Utilice una instracción for. Suponga que se han declarado las variables suma y cuenta.
+                    </p>
+                </li>
+                <!-- -------------------<<a>>------------------- -->
+                <script>
+                    /* a) */
+                    let numero;
+                    let cuenta;
+                    let suma = 0;
+
+                    for(let i=0;i<100;i++){
+                        // determino si el numero es impar, si el residuo es diferente de 0 es impar
+                        if(i % 2 != 0){
+                            console.log(i); // muestro en consola    
+                        }
+                        suma += i; 
+                    }
+
+                    console.log("Suma de impares del 1 al 99 = "+suma);
+                    document.writeln("Suma de impares del 1 al 99 = "+suma);
+                </script>
+               <hr>
+                <!-- b -->
+                <li>
+                    <p>
+                        <strong>b)</strong> Calcular el valor de 2.5 elevado a la potencia de 3. Use el método pow. 
+                </li>
+               <!-- -------------------<<b>>------------------- -->
+                   
+                   <script>
+                       let resultado = 0;
+                       /* b) */
+                       resultado = Math.pow(2.5, 3);
+                       document.writeln("<p> 2.5<sup>3</sup> = "+resultado+" </p>");
+                   </script>
+                <hr>
+                <!-- c -->
+                <li>
+                    <p>
+                        <strong>c)</strong> Imprimir los enteros del 1 al 20 mediante el uso de un ciclo while y la variable contador x. Imprimar solo cinco entero por línea.
+                    </p>
+                </li>
+                
+                <!-- -------------------<<c>>------------------- -->
+                
+                <script>
+                    /* c) */
+                    let x = 1;
+
+                    document.writeln("<p>");
+
+                    while(x <= 20){
+                        document.writeln(x+" ");
+                        if(x % 5 == 0){
+                            document.writeln("</p><p>");
+                        }
+                        ++x;
+                    }
+                </script>
+                <hr>
+                <!-- d -->
+                <li>
+                    <p>
+                        <strong>d)</strong> Repita el ejercicio 8.2 (c), pero ahora use una instrucción for.+
+                    </p>
+                </li>
+                
+                <!-- -------------------<<JavaScript>>------------------- -->
+                
+                <script>
+                    /* d) */
+                    let y = 1;
+                    document.writeln("<p>");
+                    for(y=1;y<=20;y++){
+                        document.writeln(y + " ");
+                        if(x % 5 == 0){
+                            document.writeln("</p><p>");
+                        }
+                    }
+                    document.writeln("</p>");
+                </script>
+            </ul>
+        </article>
+
+        <section class="botones">
+            <a href="Ejercicio8_1.html">
+                <label>
+                    <input type="submit" name="anterior" class="anterior" value="Anterior"/>
+                </label>
+            </a>
+            <a href="Ejercicio8_2.html">
+                <label>
+                    <input type="submit" name="inicio" class="inicio" value="Inicio">
+                </label>
+            </a>
+            <a href="Ejercicio8_3.html">
+                <label>
+                    <input type="submit" name="siguiente" class="siguiente" value="Siguiente">
+                </label>
+            </a>
+        </section>
+    </body>
+</html>

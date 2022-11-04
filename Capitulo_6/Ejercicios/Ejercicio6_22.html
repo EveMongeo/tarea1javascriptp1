@@ -1,0 +1,90 @@
+<!-- Montero Gómez Evelin -->
+<!-- Programación Web -->
+<!DOCTYPE html>
+
+<!-- Ejercicio 6.22 -->
+<!-- Ejercicios de autoevaluación -->
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejercicio 6.22</title>
+        <link rel="stylesheet" href="../../styles/styles-ejer.css">
+        <!-- Fuente -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Clicker+Script&display=swap" rel="stylesheet">
+
+    </head>
+
+    <body>
+
+        <!-- Banner -->
+    <header class="banner">
+        <a href="../../index.html">
+            <label>
+                <input type="submit" name="regresar" class="boton-indice" value="Regresar">
+            </label>
+        </a>
+        <h1 id="titulo">Cap&iacute;tulo 6: Ejercicios</h1>
+        <p id="parrafo">
+            <strong>
+                < Ejercicio 6.22 />
+            </strong>
+        </p>
+        <h2 id="nombre">Montero G&oacute;mez Evelin</h2>
+        <!-- Botón direccionador a índice -->
+    </header>
+    
+    <header class="encabezado">
+        <h1 id="encabezado">Múltiplos</h1>
+    </header>
+
+        <!-- Contenedor -->
+        <article class="contenedor">
+        <p>Escriba una secuencia de comandos que lea dos enteros, determine y 
+           produzca texto de HTML5 que muestre si el primero es múltiplo del segundo.</p>
+        
+           <!-- Programación -->
+        <script>
+            /* variables */
+            let n1, n2;
+            /* Llenado de variables */
+            n1 = parseInt(window.prompt("Escribe el primer número: "));
+            n2 = parseInt(window.prompt("Escribe el segundo número: "));
+
+            /* funcion para saber si un numero es multiplo */
+            function multiplo(a,b){
+                //Si el residuo es 0, entonces es multiplo
+                if(a % b == 0){
+                    return document.writeln("<h4>"+a+" es múltiplo de "+b+".</h4>");
+                }else{
+                    return document.writeln("<h4>"+a+" no es múltiplo de "+b+".</h4>");
+                }
+            }
+
+            /* determinar si es multiplo */
+            multiplo(n1,n2);
+        </script>
+        
+        </article>
+
+        <section class="botones">
+            <a href="Ejercicio6_21.html">
+                <label>
+                    <input type="submit" name="anterior" class="anterior" value="Anterior"/>
+                </label>
+            </a>
+            <a href="Ejercicio6_22.html">
+                <label>
+                    <input type="submit" name="inicio" class="inicio" value="Inicio">
+                </label>
+            </a>
+            <a href="Ejercicio6_23.html">
+                <label>
+                    <input type="submit" name="siguiente" class="siguiente" value="Siguiente">
+                </label>
+            </a>
+        </section>
+    </body>
+</html>

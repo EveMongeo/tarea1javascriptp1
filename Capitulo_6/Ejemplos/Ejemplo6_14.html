@@ -1,0 +1,101 @@
+<!-- Montero Gómez Evelin -->
+<!-- Programación Web -->
+<!DOCTYPE html>
+
+<!-- Fig. 6.14: bienvenido5.html -->
+<!-- Uso de operadores de igualdad y relacionales. -->
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejemplo 6.14</title>
+        <link rel="stylesheet" href="../../styles/styles-ejer.css">
+        <!-- Fuente -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Clicker+Script&display=swap" rel="stylesheet">
+
+    </head>
+
+    <body>
+
+        <!-- Banner -->
+    <header class="banner">
+        <a href="../../index.html">
+            <label>
+                <input type="submit" name="regresar" class="boton-indice" value="Regresar">
+            </label>
+        </a>
+        <h1 id="titulo">Cap&iacute;tulo 6: Ejemplos</h1>
+        <p id="parrafo">
+            <strong>
+                < Ejemplo 6.14 />
+            </strong>
+        </p>
+        <h2 id="nombre">Montero G&oacute;mez Evelin</h2>
+        <!-- Botón direccionador a índice -->
+    </header>
+    
+    <header class="encabezado">
+        <h1 id="encabezado">Uso de operadores relacionales</h1>
+    </header>
+
+        <!-- Contenedor -->
+        <div class="contenedor">
+
+            <script>
+
+                var nombre; // Cadena introducida por el usuario
+                var ahora = new Date(); // Fecha y hora actuales
+                var hora = ahora.getHours(); // Hora actual (0-23)
+
+                // Lee el nombnre del cuadro indicador como una cadena
+                nombre = window.prompt("Escriba su nombre");
+
+                // Determinaa si es de mañana
+                if (hora < 12){
+                    document.write("<h4>Buenos días, ");
+                }
+                
+                // Determina si la hora es PM
+                if (hora >= 12)
+                {
+                    // Convierte a reloj de 12 horas
+                    hora = hora - 12;
+
+                    // Determina si es antes de las 6 PM
+                    if (hora < 6){
+                        document.write("<h4>Buenas tardes, ");
+                    }                    
+
+                    // Determina si es después de las 6 PM
+                    if (hora >= 6){
+                        document.write("<h4>Buenas noches, ");
+                    }
+                } // end if
+
+                document.writeln(nombre + 
+                ". Bienvenido a la programación en JavaScript.</h4>");
+    
+            </script>
+        </div>
+
+        <section class="botones">
+            <a href="Ejemplo6_7.html">
+                <label>
+                    <input type="submit" name="anterior" class="anterior" value="Anterior"/>
+                </label>
+            </a>
+            <a href="Ejemplo6_14.html">
+                <label>
+                    <input type="submit" name="inicio" class="inicio" value="Inicio">
+                </label>
+            </a>
+            <a href="../Ejercicios/Ejercicio6_1.html">
+                <label>
+                    <input type="submit" name="siguiente" class="siguiente" value="Siguiente">
+                </label>
+            </a>
+        </section>
+    </body>
+</html>

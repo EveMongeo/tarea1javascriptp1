@@ -1,0 +1,87 @@
+<!-- Montero Gómez Evelin -->
+<!-- Programación Web -->
+<!DOCTYPE html>
+
+<!-- Ejercicio 6.15: Cuestionario -->
+<!-- Ejercicios de autoevaluación -->
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejercicio 6.15</title>
+        <link rel="stylesheet" href="../../styles/styles-ejer.css">
+        <!-- Fuente -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Clicker+Script&display=swap" rel="stylesheet">
+
+    </head>
+
+    <body>
+
+        <!-- Banner -->
+    <header class="banner">
+        <a href="../../index.html">
+            <label>
+                <input type="submit" name="regresar" class="boton-indice" value="Regresar">
+            </label>
+        </a>
+        <h1 id="titulo">Cap&iacute;tulo 6: Ejercicios</h1>
+        <p id="parrafo">
+            <strong>
+                < Ejercicio 6.15 />
+            </strong>
+        </p>
+        <h2 id="nombre">Montero G&oacute;mez Evelin</h2>
+        <!-- Botón direccionador a índice -->
+    </header>
+
+        <!-- Contenedor -->
+        <article class="contenedor">
+        <h4>Escriba una secuencia de comandos que muestre los números del 1 al 4 en la misma línea, con cada par de números 
+            adyacentes separados por un espacio. Escriba la secuencia de comandos usando los siguientes métodos:
+        </h4>
+            <ol type="a">
+                <!-- a) -->
+                <li>
+                    Use una instrucción document.writeln.
+                </li>
+
+                <!-- Código -->
+                <script>
+                    document.writeln(1, 2, " ", 3, 4);
+                </script>
+
+                <!-- b) -->
+                <li>
+                    Use 4 instrucciones document.write.
+                </li>
+                 <!-- Código -->
+                 <script>
+                    document.write(1);
+                    document.write(2, " ");
+                    document.write(3);
+                    document.write(4);
+                 </script>
+            </ol>
+        </article>
+
+        <section class="botones">
+            <a href="Ejercicio6_14.html">
+                <label>
+                    <input type="submit" name="anterior" class="anterior" value="Anterior"/>
+                </label>
+            </a>
+            <a href="Ejercicio6_15.html">
+                <label>
+                    <input type="submit" name="inicio" class="inicio" value="Inicio">
+                </label>
+            </a>
+            <a href="Ejercicio6_16.html">
+                <label>
+                    <input type="submit" name="siguiente" class="siguiente" value="Siguiente">
+                </label>
+            </a>
+        </section>
+    </body>
+</html>

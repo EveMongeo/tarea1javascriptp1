@@ -1,0 +1,118 @@
+<!-- Montero Gómez Evelin -->
+<!-- Programación Web -->
+<!DOCTYPE html>
+
+<!-- Ejercicio 7.11: Cuestionario  -->
+
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejercicio 7.11</title>
+        <link rel="stylesheet" href="../../styles/styles-ejer.css">
+        <!-- Fuente -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Clicker+Script&display=swap" rel="stylesheet">
+
+    </head>
+    <body>
+
+        <!-- Banner -->
+    <header class="banner">
+        <a href="../../index.html">
+            <label>
+                <input type="submit" name="regresar" class="boton-indice" value="Regresar">
+            </label>
+        </a>
+        <h1 id="titulo">Capítulo 7: Ejercicios</h1>
+        <p id="parrafo">
+            <strong>
+                < Ejercicio 7.11 />
+            </strong>
+        </p>
+        <h2 id="nombre">Montero G&oacute;mez Evelin</h2>
+        <!-- Botón direccionador a índice -->
+    </header>
+    
+    <header class="encabezado">
+        <h1 id="encabezado">Análisis de código</h1>
+    </header>
+
+        <!-- Contenedor -->
+        <article class="contenedor">
+            <p>
+                Los conductores se preocupan acerca del kilometraje de sus autos 
+                Un conductor ha llevado el control de varios rebastecimientos de gasolina, 
+                registrando los Km conducidos y los Lt usadosen cada viaje. Desarrolle una secuencia de 
+                comandos que reciba como entrada los Km conducidos y los Lt usados por cada viaje. 
+                La secuencia de comandos debe calcular y producir texto de HTML5 que muestre el 
+                número de Km por Lt obtenido en cada viaje, y debe imprimir el total de Km por Lt 
+                obtenidos en todos los reabastecimientos hasta este punto.
+            </p>
+            <script>
+                /* variables */
+                let totalLitros = 0;
+                let totalKilometros = 0;
+                let contaRegistros = 0;
+
+                let cantKilometros;
+                let cantLitros;
+
+                let promedio;
+
+                let continuar = 5;
+
+                // pedir los Km al usuario
+                cantKilometros = window.prompt("Escribe la cantidad de Kilometros conducidos: ","0");
+                
+                // convertir de cadena a float
+                cantKilometros = parseFloat(cantKilometros);
+                cantLitros = parseFloat(cantLitros);
+                promedio = parseFloat(promedio);
+
+                //ciclo while
+                while(continuar != -1){
+                    cantLitros = window.prompt("Escribe la cantidad de gasolina utilizada: ");
+                    document.writeln("La cantidad de kilometros para este reabastecimiento es: "+ (cantKilometros/cantLitros));
+
+                    totalKilometros += cantKilometros;
+                    totalLitros += cantLitros;
+                    contaRegistros++; 
+
+                    cantKilometros = window.prompt("Escribe la cantidad de kilometros conducidos: ","0");
+
+                    continuar = window.prompt("Si desea salir ingresa -1, sino presiona cualquier otra tecla.");
+                    continuar = parseInt(continuar);
+                }
+
+                /* Numero de reabastecimientos y promedio */
+                if(contaRegistros != 0){
+                    promedio = totalKilometros / totalLitros; 
+                    document.writeln("Número de reabastecimientos: "+ contaRegistros);
+                    document.writeln("Promedio: "+ promedio);
+                }else{
+                    document.writeln("No hay registros que evaluar.");
+                }
+            </script>
+        </article>
+
+        <section class="botones">
+            <a href="Ejercicio7_10.html">
+                <label>
+                    <input type="submit" name="anterior" class="anterior" value="Anterior"/>
+                </label>
+            </a>
+            <a href="Ejercicio7_11.html">
+                <label>
+                    <input type="submit" name="inicio" class="inicio" value="Inicio">
+                </label>
+            </a>
+            <a href="Ejercicio7_12.html">
+                <label>
+                    <input type="submit" name="siguiente" class="siguiente" value="Siguiente">
+                </label>
+            </a>
+        </section>
+    </body>
+</html>

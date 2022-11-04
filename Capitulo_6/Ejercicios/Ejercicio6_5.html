@@ -1,0 +1,107 @@
+<!-- Montero Gómez Evelin -->
+<!-- Programación Web -->
+<!DOCTYPE html>
+
+<!-- Ejercicio 6.5: Corección de errores -->
+<!-- Ejercicios de autoevaluación -->
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejercicio 6.5</title>
+        <link rel="stylesheet" href="../../styles/styles-ejer.css">
+        <!-- Fuente -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Clicker+Script&display=swap" rel="stylesheet">
+
+    </head>
+
+    <body>
+
+        <!-- Banner -->
+    <header class="banner">
+        <a href="../../index.html">
+            <label>
+                <input type="submit" name="regresar" class="boton-indice" value="Regresar">
+            </label>
+        </a>
+        <h1 id="titulo">Cap&iacute;tulo 6: Ejercicios</h1>
+        <p id="parrafo">
+            <strong>
+                < Ejercicio 6.5 />
+            </strong>
+        </p>
+        <h2 id="nombre">Montero G&oacute;mez Evelin</h2>
+        <!-- Botón direccionador a índice -->
+    </header>
+
+    <script>
+        //Calcula el producto de 3 enteros.
+        var  x, y, z, xVal, yVal, zVal;
+        xVal = window.prompt("Escriba el primer entero", 0);
+        yVal = window.prompt("Escriba el segundo entero", 0);
+        zVal = window.prompt("Escriba el tercer entero", 0);
+
+        x = parseInt(xVal);
+        y = parseInt(yVal);
+        z = parseInt(zVal);
+        
+        resultado = x * y * z;
+
+    </script>    
+
+        <!-- Contenedor -->
+        <article class="contenedor">
+            <h4>Escriba una instrucción (o comentario) para realizar cada una de las siguientes tareas:</h4>
+           <!-- Incisos -->
+            <ol type="a">
+                <!-- a) -->
+                <li>Indique que una secuencia de comandos calculará el producto de tres enteros.</li>
+                <!-- b) -->
+                <li>Declare las variables x, y, z, y resultado.</li>
+                <!-- c) -->
+                <li>Declare las variables xVal, yVal y zVal.</li>
+                <!-- d) -->
+                <li>Pida al usuario que introduzca el primer valor, lea el valor del usuario y almacénelo en la variable xVal.</li>
+                <!-- e) -->
+                <li>Pida al usuario que introduzca el segundo valor, lea el valor del usuario y almacénelo en la variable yVal.</li>
+                <!-- f) -->
+                <li>Pida al usuario que introduzca el tercer valor, lea el valor del usuario y almacénelo en la variable zVal.</li>
+                <!-- g) -->
+                <li>Convierta la cadena xVal en un entero y almacene el resultado en la variable x.</li>
+                <!-- h) -->
+                <li>Convierta la cadena yVal en un entero y almacene el resultado en la variable y.</"li>
+                <!-- i) -->
+                <li>Convierta la cadena zVal en un entero y almacene el resultado en la variable z.</li>
+                <!-- j) -->
+                <li>Calcule el producto de los tres enteros contenidos en las variables x. y, y z y asigne el resultado a la variable resultado.</li>
+                <!-- k) -->
+                <li>Escriba una línea de texto de HTML5 que contenga la cadena "El producto es" seguida del valor de la variable resultado.</li>
+           </ol>
+
+           <script>
+                document.writeln("<h4>El producto es " + resultado + "</h4>");
+           </script>
+
+        </article>
+
+        <section class="botones">
+            <a href="Ejercicio6_4.html">
+                <label>
+                    <input type="submit" name="anterior" class="anterior" value="Anterior"/>
+                </label>
+            </a>
+            <a href="Ejercicio6_5.html">
+                <label>
+                    <input type="submit" name="inicio" class="inicio" value="Inicio">
+                </label>
+            </a>
+            <a href="Ejercicio6_6.html">
+                <label>
+                    <input type="submit" name="siguiente" class="siguiente" value="Siguiente">
+                </label>
+            </a>
+        </section>
+    </body>
+</html>

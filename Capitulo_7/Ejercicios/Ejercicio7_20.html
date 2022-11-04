@@ -1,0 +1,99 @@
+<!-- Montero Gómez Evelin -->
+<!-- Programación Web -->
+<!DOCTYPE html>
+
+<!-- Ejercicio 7.20: Cuestionario  -->
+
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejercicio 7.20</title>
+        <link rel="stylesheet" href="../../styles/styles-ejer.css">
+        <!-- Fuente -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Clicker+Script&display=swap" rel="stylesheet">
+
+    </head>
+    <body>
+
+        <!-- Banner -->
+    <header class="banner">
+        <a href="../../index.html">
+            <label>
+                <input type="submit" name="regresar" class="boton-indice" value="Regresar">
+            </label>
+        </a>
+        <h1 id="titulo">Capítulo 7: Ejercicios</h1>
+        <p id="parrafo">
+            <strong>
+                < Ejercicio 7.20 />
+            </strong>
+        </p>
+        <h2 id="nombre">Montero G&oacute;mez Evelin</h2>
+        <!-- Botón direccionador a índice -->
+    </header>
+
+    <header class="encabezado">
+        <h1 id="encabezado">Palíndromo</h1>
+    </header>
+        <!-- Contenedor -->
+        <article class="contenedor">
+            <p>
+                Un palíndromo es un número o una frase de texto que se lee igual al 
+                derecho y al revés. Por ejemplo, cada uno los siguientes enteros de 
+                cinco dígitos es un paíndromo: 12321, 555555, 45554, y 11611. Escribe 
+                una secuencia de comandos que lea un entero de cinco dígitos y determine si es un palíndromo.
+            </p>
+            <script>
+                function palindromo(n){
+                    inicio = 0;
+                    final = n.length - 1;
+                    while(n[inicio] == n[final]){
+                        if (inicio > final){
+                            return true;
+                        }
+                        inicio++;
+                        final--;
+                    }
+                    return false;
+                }
+        
+                let numeros;
+        
+                numeros = window.prompt("Ingresa un número de 5 Dígitos: ","xxxxx");
+                
+                if(numeros.length > 5){
+                    while(numeros.length != 5){
+                        numeros = window.prompt("Error, el número ingresado tiene más de 5 dígitos\n Ingresa un número de 5 Dígitos: ","xxxxx");
+                    }
+                }
+                /* muestro en consola */
+                palindromo(numeros) ? console.log("El número es palindromo") : console.log("El numero NO es palindromo");
+                
+                /* escribir en el documento de HTML5 */
+                palindromo(numeros) ? document.writeln("El número "+ numeros +" es palindromo: ") : document.writeln("El numero "+numeros+" NO es palindromo");
+                
+                </script>
+        </article>
+
+        <section class="botones">
+            <a href="Ejercicio7_19.html">
+                <label>
+                    <input type="submit" name="anterior" class="anterior" value="Anterior"/>
+                </label>
+            </a>
+            <a href="Ejercicio7_20.html">
+                <label>
+                    <input type="submit" name="inicio" class="inicio" value="Inicio">
+                </label>
+            </a>
+            <a href="Ejercicio7_21.html">
+                <label>
+                    <input type="submit" name="siguiente" class="siguiente" value="Siguiente">
+                </label>
+            </a>
+        </section>
+    </body>
+</html>

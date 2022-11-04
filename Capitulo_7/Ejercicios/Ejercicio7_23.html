@@ -1,0 +1,111 @@
+<!-- Montero Gómez Evelin -->
+<!-- Programación Web -->
+<!DOCTYPE html>
+
+<!-- Ejercicio 7.23: Cuestionario  -->
+
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejercicio 7.23</title>
+        <link rel="stylesheet" href="../../styles/styles-ejer.css">
+        <!-- Fuente -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Clicker+Script&display=swap" rel="stylesheet">
+
+    </head>
+    <body>
+
+        <!-- Banner -->
+    <header class="banner">
+        <a href="../../index.html">
+            <label>
+                <input type="submit" name="regresar" class="boton-indice" value="Regresar">
+            </label>
+        </a>
+        <h1 id="titulo">Capítulo 7: Ejercicios</h1>
+        <p id="parrafo">
+            <strong>
+                < Ejercicio 7.23 />
+            </strong>
+        </p>
+        <h2 id="nombre">Montero G&oacute;mez Evelin</h2>
+        <!-- Botón direccionador a índice -->
+    </header>
+
+    <header class="encabezado">
+        <h1 id="encabezado">Cifrado</h1>
+    </header>
+        <!-- Contenedor -->
+        <article class="contenedor">
+            <script>                
+                function Desencriptar(){
+                    
+                    let entradaNumeros;
+                    let aux;
+                    let numerosDesencriptados;
+                    
+                    entradaNumeros = window.prompt("Ingresa un número de 4 dígitos: ");
+                    
+                    let numero = entradaNumeros;
+                    let n1 = 0;     // Digito 1
+                    let n2 = 0;     // Digito 2
+                    let n3 = 0;     // Digito 3
+                    let n4 = 0;     // Digito 4
+                    
+                    document.writeln("Los números encriptados son: " + entradaNumeros);
+                    
+                    n1 = parseInt(numero / 1000);
+                    n2 = parseInt(numero % 1000 / 100);
+                    n3 = parseInt(numero % 1000 % 100 / 10);
+                    n4 = parseInt(numero % 1000 % 100 % 10);
+
+                    /* Cambiar posiciones */
+                    aux = n1;
+                    n1 = n3;
+                    n3 = aux;
+                    aux = n2;
+                    n2 = n4;
+                    n4 = aux;
+
+                    aux = parseInt((n1 + 3) % 10);
+                    n1 = parseInt((n3 + 3) % 10);
+                    n3 = aux;
+                    aux = parseInt((n2 + 3) % 10);
+                    n2 = parseInt((n4 + 3) % 10);
+                    n4 = aux;
+                    
+                    numerosDesencriptados = n1 * 1000 + n2 * 100 + n3 * 10 + n4;
+
+                    return document.writeln("<br>El número desencriptado es " + numerosDesencriptados);
+
+                }
+                Desencriptar();
+             </script>
+            <p>
+                Escriba una secuencia de comandos que reciba como entrada un entero cifrado de cuatro dígitos y lo descifre para formar el número original.
+            </p>
+            
+        </article>
+
+        <section class="botones">
+            <a href="Ejercicio7_22.html">
+                <label>
+                    <input type="submit" name="anterior" class="anterior" value="Anterior"/>
+                </label>
+            </a>
+            <a href="Ejercicio7_23.html">
+                <label>
+                    <input type="submit" name="inicio" class="inicio" value="Inicio">
+                </label>
+            </a>
+            <a href="../../Capitulo_8/Ejemplo8_1">
+                <label>
+                    <input type="submit" name="siguiente" class="siguiente" value="Siguiente">
+                </label>
+            </a>
+        </section>
+    </body>
+</html>
