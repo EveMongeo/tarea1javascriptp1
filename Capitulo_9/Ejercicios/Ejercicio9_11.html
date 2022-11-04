@@ -1,0 +1,114 @@
+<!-- Montero Gómez Evelin -->
+<!-- Programación Web -->
+<!DOCTYPE html>
+
+
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejercicio 9.11</title>
+        <link rel="stylesheet" href="../../styles/styles-ejer.css">
+        <!-- Fuente -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Clicker+Script&display=swap" rel="stylesheet">
+
+    </head>
+    <style type="text/css">
+        ul{
+            list-style: none;
+        }
+    </style>
+
+    <body>
+
+        <!-- Banner -->
+    <header class="banner">
+        <a href="../../index.html">
+            <label>
+                <input type="submit" name="regresar" class="boton-indice" value="Regresar">
+            </label>
+        </a>
+        <h1 id="titulo">Capítulo 9: Ejercicios</h1>
+        <p id="parrafo">
+            <strong>
+                < Ejercicio 9.11 />
+            </strong>
+        </p>
+        <h2 id="nombre">Montero G&oacute;mez Evelin</h2>
+        <!-- Botón direccionador a índice -->
+    </header>
+    
+    <header class="encabezado">
+        <h1 id="encabezado">Rangos variables</h1>
+    </header>
+
+        <!-- Contenedor -->
+        <article class="contenedor">
+            <ol style="list-style-type: disc;">
+                <li>
+                    <strong>1 &le; n &le; 2</strong>
+                </li>
+                <p>
+                    n = Math.floor(Math.random() * (2) + 1);
+                </p>
+                            
+                <li>
+                    <strong>1 &le; n &le; 100</strong>
+                </li>
+                <p>
+                    n = Math.floor(Math.random() * (100 - 1) + 1);
+                </p>
+                            
+                <li>
+                    <strong>0 &le; n &le; 9</strong>
+                </li>
+                <p>
+                    n = Math.floor(Math.random() * (9 - 0) + 0);
+                </p>
+                            
+                <li>
+                    <strong>1000 &le; n &le; 1112</strong>
+                </li>
+                <p>
+                    n = Math.floor(Math.random() * (1112 - 1000) + 1000);
+                </p>
+                            
+                <li>
+                    <strong>-1 &le; n &le; 1</strong>
+                </li>
+                <p>
+                    n = Math.floor(Math.random() * (2 + 1) - 1);
+                </p>
+                            
+                <li>
+                    <strong>-3 &le; n &le; 11</strong>
+                </li>
+                <p>
+                    n = Math.floor(Math.random() * (-3) + 11);
+                </p>
+            </ol>
+            
+          
+        </article>
+
+        <section class="botones">
+            <a href="Ejercicio9_10.html">    <!-- anterior -->
+                <label>
+                    <input type="submit" name="anterior" class="anterior" value="Anterior"/>
+                </label>
+            </a>
+            <a href="Ejercicio9_1.html">
+                <label>
+                    <input type="submit" name="inicio" class="inicio" value="Inicio">
+                </label>
+            </a>
+            <a href="Ejercicio9_12.html">    <!-- siguiente -->
+                <label>
+                    <input type="submit" name="siguiente" class="siguiente" value="Siguiente">
+                </label>
+            </a>
+        </section>
+    </body>
+</html>

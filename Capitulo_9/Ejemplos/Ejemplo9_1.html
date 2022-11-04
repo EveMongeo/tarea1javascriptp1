@@ -1,0 +1,75 @@
+<!-- Montero Gómez Evelin -->
+<!-- Programación Web -->
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejemplo 9.1</title>
+        <link rel="stylesheet" href="../../styles/styles-ejer.css">
+        <!-- Fuente -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Clicker+Script&display=swap" rel="stylesheet">
+    </head>
+    
+    <body>
+
+        <!-- Banner -->
+    <header class="banner">
+        <a href="../../index.html">
+            <label>
+                <input type="submit" name="regresar" class="boton-indice" value="Regresar">
+            </label>
+        </a>
+        <h1 id="titulo">Capítulo 9: Ejemplos</h1>
+        <p id="parrafo">
+            <strong>
+                < Ejemplo 9.1 />
+            </strong>
+        </p>
+        <h2 id="nombre">Montero G&oacute;mez Evelin</h2>
+        <!-- Botón direccionador a índice -->
+    </header>
+    
+    <header class="encabezado">
+        <h1 id="encabezado">Una función de cuadrado definida por el programador</h1>
+    </header>
+
+        <!-- Contenedor -->
+        <article class="contenedor">
+           <h4>Obtener el cuadrado de los números del 1 al 10</h4>
+           <script>
+
+            //obtener el cuadrado de los números del 1 al 10
+            for ( var x = 1; x <= 10; ++x )
+                document.writeln("<p>El cuadrado de " + x + " es " + cuadrado( x ) + "</p>");
+
+            //El cuerpo de la siguiente definición de la función cuadrado se ejecuta
+            //sólo cuando la función se llama de manera explícita como en la línea 19
+            function cuadrado( y ){
+                return y * y;
+            } //fin de la función cuadrado
+
+        </script>
+        </article>
+
+        <section class="botones">
+            <a href="../../Capitulo_8/Ejercicios/Ejercicio8_13.html">
+                <label>
+                    <input type="submit" name="anterior" class="anterior" value="Anterior"/>
+                </label>
+            </a>
+            <a href="Ejemplo9_1.html">
+                <label>
+                    <input type="submit" name="inicio" class="inicio" value="Inicio">
+                </label>
+            </a>
+            <a href="Ejemplo9_2.html">
+                <label>
+                    <input type="submit" name="siguiente" class="siguiente" value="Siguiente">
+                </label>
+            </a>
+        </section>
+    </body>
+</html>

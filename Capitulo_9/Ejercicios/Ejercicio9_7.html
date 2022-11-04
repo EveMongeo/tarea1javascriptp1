@@ -1,0 +1,98 @@
+<!-- Montero Gómez Evelin -->
+<!-- Programación Web -->
+<!DOCTYPE html>
+
+
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejercicio 9.7</title>
+        <link rel="stylesheet" href="../../styles/styles-ejer.css">
+        <!-- Fuente -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Clicker+Script&display=swap" rel="stylesheet">
+        <script>
+
+            function iniciar(){
+                let boton = document.getElementById("botonCalcular");
+                let campoRadio = document.getElementById("campoRadio");
+                let resultado = document.getElementById("resultado");
+    
+                boton.addEventListener("click", areaCirculo, false);
+            }
+    
+            function areaCirculo(){
+                let area = Math.PI * Math.pow(parseFloat(campoRadio.value), 2);
+    
+                resultado.innerHTML = "El área es: " + area;
+            }
+    
+            window.addEventListener("load", iniciar, false);
+    
+        </script>
+    </head>
+    <style type="text/css">
+        ul{
+            list-style: none;
+        }
+    </style>
+
+    <body>
+
+        <!-- Banner -->
+    <header class="banner">
+        <a href="../../index.html">
+            <label>
+                <input type="submit" name="regresar" class="boton-indice" value="Regresar">
+            </label>
+        </a>
+        <h1 id="titulo">Capítulo 9: Ejercicios</h1>
+        <p id="parrafo">
+            <strong>
+                < Ejercicio 9.7 />
+            </strong>
+        </p>
+        <h2 id="nombre">Montero G&oacute;mez Evelin</h2>
+        <!-- Botón direccionador a índice -->
+    </header>
+    
+    <header class="encabezado">
+        <h1 id="encabezado">scriba una secuencia de comandos</h1>
+    </header>
+
+        <!-- Contenedor -->
+        <article class="contenedor">
+            <p>
+                Escriba una secuencia de comandos que use un formulario <em>(form)</em> para obtener el radio de un círculo del usuario y después llame a la función <em>areaCirculo</em> para calcular el área del círculo y mostrar el resultado en un párrafo en la página.
+            </p>
+            
+            <form action="#">
+                <input type="number" name="Radio" id="campoRadio">
+                <input type="button" value="Calcular área" id="botonCalcular">
+            </form>
+            <p id="resultado"></p>
+
+          
+        </article>
+
+        <section class="botones">
+            <a href="Ejercicio9_6.html">
+                <label>
+                    <input type="submit" name="anterior" class="anterior" value="Anterior"/>
+                </label>
+            </a>
+            <a href="Ejercicio9_1.html">
+                <label>
+                    <input type="submit" name="inicio" class="inicio" value="Inicio">
+                </label>
+            </a>
+            <a href="Ejercicio9_8.html">
+                <label>
+                    <input type="submit" name="siguiente" class="siguiente" value="Siguiente">
+                </label>
+            </a>
+        </section>
+    </body>
+</html>

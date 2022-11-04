@@ -1,0 +1,116 @@
+<!-- Montero Gómez Evelin -->
+<!-- Programación Web -->
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejemplo 9.4</title>
+        <link rel="stylesheet" href="../../styles/styles-ejer.css">
+        <!-- Fuente -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Clicker+Script&display=swap" rel="stylesheet">
+    </head>
+    <style type="text/css">
+        li { display: inline; margin-right: 10px; }
+        ul { margin: 0; }
+    </style>
+    <body>
+
+        <!-- Banner -->
+    <header class="banner">
+        <a href="../../index.html">
+            <label>
+                <input type="submit" name="regresar" class="boton-indice" value="Regresar">
+            </label>
+        </a>
+        <h1 id="titulo">Capítulo 9: Ejemplos</h1>
+        <p id="parrafo">
+            <strong>
+                < Ejemplo 9.4 />
+            </strong>
+        </p>
+        <h2 id="nombre">Montero G&oacute;mez Evelin</h2>
+        <!-- Botón direccionador a índice -->
+    </header>
+    
+    <header class="encabezado">
+        <h1 id="encabezado">Imágenes aleatorias de dados</h1>
+    </header>
+
+        <!-- Contenedor -->
+        <article class="contenedor">
+            <script>
+                //variables utilizadas para interactuar con los elementos img
+                var imagenDado1;
+                var imagenDado2;
+                var imagenDado3;
+                var imagenDado4;
+    
+                //registrar componente de escucha del botón y obtener los elementos img
+                function iniciar(){
+                    var boton = document.getElementById("botonTirar");
+                    boton.addEventListener("click", tirarDados, false);
+                    imagenDado1 = document.getElementById("dado1");
+                    imagenDado2 = document.getElementById("dado2");
+                    imagenDado3 = document.getElementById("dado3");
+                    imagenDado4 = document.getElementById("dado4");
+                } //fin de la función iniciar
+    
+                //tirar los dados
+                function tirarDados(){
+                    establecerImagen( imagenDado1 );
+                    establecerImagen( imagenDado2 );
+                    establecerImagen( imagenDado3 );
+                    establecerImagen( imagenDado4 );
+                }// fin de la función tirarDados
+    
+                //seleccionar el origen de la imagen de un dado
+                function establecerImagen( imgDado ){
+                    var valorDado = Math.floor( 1 + Math.random() * 6 );
+                    imgDado.setAttribute("src","../../Images/cara" + valorDado + ".png");
+                    imgDado.setAttribute("alt","imagen de un dado con " + valorDado + " punto(s)");
+                } //fin de la función establecerImagen
+    
+                window.addEventListener("load", iniciar, false);
+            </script>
+            <br><br>
+            <form action="#">
+                <input type="button" value="Tirar dados" id="botonTirar" class="inicio">
+            </form>
+            <ol>
+                <li>
+                    <img src="../../Images/cuadrado_blanco.png" alt="Imagen en blanco" id="dado1" width="100px" height="100px">
+                </li>
+                <li>
+                    <img src="../../Images/cuadrado_blanco.png" alt="Imagen en blanco" id="dado2" width="100px" height="100px">
+                </li>
+                <li>
+                    <img src="../../Images/cuadrado_blanco.png" alt="Imagen en blanco" id="dado3" width="100px" height="100px">
+                </li>
+                <li>
+                    <img src="../../Images/cuadrado_blanco.png" alt="Imagen en blanco" id="dado4" width="100px" height="100px">
+                </li>
+            </ol>
+        </article>
+
+        <section class="botones">
+            <a href="Ejemplo9_3.html">
+                <label>
+                    <input type="submit" name="anterior" class="anterior" value="Anterior"/>
+                </label>
+            </a>
+            <a href="Ejemplo9_4.html">
+                <label>
+                    <input type="submit" name="inicio" class="inicio" value="Inicio">
+                </label>
+            </a>
+            <a href="Ejemplo9_5.html">
+                <label>
+                    <input type="submit" name="siguiente" class="siguiente" value="Siguiente">
+                </label>
+            </a>
+        </section>
+    </body>
+</html>

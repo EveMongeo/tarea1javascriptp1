@@ -1,0 +1,105 @@
+<!-- Montero Gómez Evelin -->
+<!-- Programación Web -->
+<!DOCTYPE html>
+
+
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejercicio 9.18</title>
+        <link rel="stylesheet" href="../../styles/styles-ejer.css">
+        <!-- Fuente -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Clicker+Script&display=swap" rel="stylesheet">
+        <script>
+            function iniciar(){
+                let boton = document.getElementById("calcular");
+                let campoUno = document.getElementById("campoUno");
+                let campoDos = document.getElementById("campoDos");
+                let campoTres = document.getElementById("campoTres");
+                let resultado = document.getElementById("resultado");
+    
+                boton.addEventListener("click", mostrar, false);
+            }
+    
+            function mostrar(){
+                resultado.innerHTML = "El valor más pequeño es: " + minimo3();
+            }
+    
+            function minimo3(){
+                let num_1 = parseFloat(campoUno.value);
+                let num_2 = parseFloat(campoDos.value);
+                let num_3 = parseFloat(campoTres.value);
+    
+                return Math.min(num_1, num_2, num_3);
+            }
+    
+            window.addEventListener("load", iniciar, false);
+        </script>
+    </head>
+    <style type="text/css">
+        ul{
+            list-style: none;
+        }
+    </style>
+
+    <body>
+
+        <!-- Banner -->
+    <header class="banner">
+        <a href="../../index.html">
+            <label>
+                <input type="submit" name="regresar" class="boton-indice" value="Regresar">
+            </label>
+        </a>
+        <h1 id="titulo">Capítulo 9: Ejercicios</h1>
+        <p id="parrafo">
+            <strong>
+                < Ejercicio 9.18 />
+            </strong>
+        </p>
+        <h2 id="nombre">Montero G&oacute;mez Evelin</h2>
+        <!-- Botón direccionador a índice -->
+    </header>
+    
+    <header class="encabezado">
+        <h1 id="encabezado">Función minimo</h1>
+    </header>
+
+        <!-- Contenedor -->
+        <article class="contenedor">
+            <p>
+                Escriba una función llamada <em>minimo3</em> que devuelva el menor de tres números de punto flotante. Use la función <em>Math.min</em> para implementar <em>minimo3</em>. Incorpore la función en una secuencia de comandos que lea tres valores del usuario y determine el valor más pequeño.
+            </p>
+            
+            <form action="#">
+                <input type="number" name="Primero" id="campoUno">
+                <input type="number" name="Segundo" id="campoDos">
+                <input type="number" name="Tercero" id="campoTres">
+                <input type="button" value="Minimo" id="calcular">
+            </form>
+            <p id="resultado"></p>
+
+        </article>
+
+        <section class="botones">
+            <a href="Ejercicio9_17.html">    <!-- anterior -->
+                <label>
+                    <input type="submit" name="anterior" class="anterior" value="Anterior"/>
+                </label>
+            </a>
+            <a href="Ejercicio9_1.html">
+                <label>
+                    <input type="submit" name="inicio" class="inicio" value="Inicio">
+                </label>
+            </a>
+            <a href="Ejercicio9_19.html">    <!-- siguiente -->
+                <label>
+                    <input type="submit" name="siguiente" class="siguiente" value="Siguiente">
+                </label>
+            </a>
+        </section>
+    </body>
+</html>

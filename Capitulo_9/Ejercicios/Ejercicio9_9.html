@@ -1,0 +1,108 @@
+<!-- Montero Gómez Evelin -->
+<!-- Programación Web -->
+<!DOCTYPE html>
+
+
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejercicio 9.9</title>
+        <link rel="stylesheet" href="../../styles/styles-ejer.css">
+        <!-- Fuente -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Clicker+Script&display=swap" rel="stylesheet">
+        <script>
+
+            function iniciar(){
+                let boton = document.getElementById("calcular");
+                let campox1 = document.getElementById("campox1");
+                let campoy1 = document.getElementById("campoy1");
+                let campox2 = document.getElementById("campox2");
+                let campoy2 = document.getElementById("campoy2");
+                let resultado = document.getElementById("resultado");
+                boton.addEventListener("click", distancia, false);
+            }
+            function distancia(){
+                let x1 = parseFloat(campox1.value);
+                let y1 = parseFloat(campoy1.value);   
+                let x2 = parseFloat(campox2.value);
+                let y2 = parseFloat(campoy2.value);
+                let powX = Math.pow((x2 - x1), 2);
+                let powY = Math.pow((y2 - y1), 2);
+                let hipotenusa = Math.sqrt(powX + powY);
+                resultado.innerHTML = "La distancia es: " + hipotenusa + " unidades.";
+            }
+            window.addEventListener("load", iniciar, false);
+        </script>
+    </head>
+    <style type="text/css">
+        ul{
+            list-style: none;
+        }
+    </style>
+
+    <body>
+
+        <!-- Banner -->
+    <header class="banner">
+        <a href="../../index.html">
+            <label>
+                <input type="submit" name="regresar" class="boton-indice" value="Regresar">
+            </label>
+        </a>
+        <h1 id="titulo">Capítulo 9: Ejercicios</h1>
+        <p id="parrafo">
+            <strong>
+                < Ejercicio 9.9 />
+            </strong>
+        </p>
+        <h2 id="nombre">Montero G&oacute;mez Evelin</h2>
+        <!-- Botón direccionador a índice -->
+    </header>
+    
+    <header class="encabezado">
+        <h1 id="encabezado">Escriba una función</h1>
+    </header>
+
+        <!-- Contenedor -->
+        <article class="contenedor">
+            <p>
+                Escriba una función llamada <em>distancia</em>, que calcule la distancia entre dos puntos (x<sub>1</sub>, y<sub>1</sub>) y (x<sub>2</sub>, y<sub>2</sub>). Todos los números y valores de retorno deben ser valores de punto flotante. Incorpore esta función en una secuencia de comandos que permita al usuario introducir las coordenadas de los puntos mediante un formulario de HTML5.
+            </p>
+            <form action="#">
+                <label for="x1">x<sub>1</sub></label>
+                <input type="number" name="x1" id="campox1"> <br>     
+                <label for="y1">y<sub>1</sub></label>
+                <input type="number" name="y1" id="campoy1"> <br>         
+                <label for="x2">x<sub>2</sub></label>
+                <input type="number" name="x2" id="campox2"> <br>               
+                <label for="y2">y<sub>2</sub></label> 
+                <input type="number" name="y2" id="campoy2"> <br><br>
+                <input type="button" value="Calcular distancia" id="calcular">
+            </form>
+            <p id="resultado"></p>
+            
+          
+        </article>
+
+        <section class="botones">
+            <a href="Ejercicio9_8.html">
+                <label>
+                    <input type="submit" name="anterior" class="anterior" value="Anterior"/>
+                </label>
+            </a>
+            <a href="Ejercicio9_1.html">
+                <label>
+                    <input type="submit" name="inicio" class="inicio" value="Inicio">
+                </label>
+            </a>
+            <a href="Ejercicio9_10.html">
+                <label>
+                    <input type="submit" name="siguiente" class="siguiente" value="Siguiente">
+                </label>
+            </a>
+        </section>
+    </body>
+</html>

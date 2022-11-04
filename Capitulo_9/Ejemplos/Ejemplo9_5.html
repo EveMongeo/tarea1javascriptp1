@@ -1,0 +1,189 @@
+<!-- Montero Gómez Evelin -->
+<!-- Programación Web -->
+<!DOCTYPE html>
+
+<!-- Fig. 9.6: TirarDados.html -->
+<!-- Tirar 12 dados y mostrar las frecuencias. -->
+
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejemplo 9.5</title>
+        <link rel="stylesheet" href="../../styles/styles-ejer.css">
+        <!-- Fuente -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Clicker+Script&display=swap" rel="stylesheet">
+    </head>
+    <style type="text/css">
+        img { margin-right: 10px; }
+        table {
+            width: 200px;
+            border-collapse: collapse;
+            background-color: lightgoldenrodyellow;
+        }
+        table, td, th {
+            /* border: 1px solid black; */
+            padding: 4px;
+            margin-top: 20px;
+        }
+        th {
+            text-align: left;
+            color: black;
+            background-color: white;
+        }
+    </style>
+    <style type="text/css">
+        li { display: inline; margin-right: 10px; }
+        ul { margin: 0; }
+    </style>
+    <body>
+
+        <!-- Banner -->
+    <header class="banner">
+        <a href="../../index.html">
+            <label>
+                <input type="submit" name="regresar" class="boton-indice" value="Regresar">
+            </label>
+        </a>
+        <h1 id="titulo">Capítulo 9: Ejemplos</h1>
+        <p id="parrafo">
+            <strong>
+                < Ejemplo 9.5 />
+            </strong>
+        </p>
+        <h2 id="nombre">Montero G&oacute;mez Evelin</h2>
+        <!-- Botón direccionador a índice -->
+    </header>
+    
+    <header class="encabezado">
+        <h1 id="encabezado">Frecuencias al tirar los dados</h1>
+    </header>
+
+        <!-- Contenedor -->
+        <article class="contenedor">
+            <script>
+                let frecuancia1 = 0;
+                let frecuancia2 = 0;
+                let frecuancia3 = 0;
+                let frecuancia4 = 0;
+                let frecuancia5 = 0;
+                let frecuancia6 = 0;
+                let totalDados = 0;
+    
+                //registrar el manejador de eventos del botón
+                function iniciar(){
+                    let boton = document.getElementById("botonTirar");
+                    boton.addEventListener("click", tirarDados, false);
+                } //fin de la función iniciar
+    
+                //tirar los datos
+                function tirarDados(){
+                    let cara; //cara que se tiró
+    
+                    //iterar para tirar el cara 12 veces
+                    for ( let i = 1; i <= 12; ++i ){
+                        cara = Math.floor( 1 + Math.random() * 6 );
+                        sumarTiros( cara ); //incrementa un contador de frecuencia
+                        establecerImagen( i, cara ); // mostrar la imagen del cara apropiado
+                        ++totalDados; //incrementar el total
+                    } //fin del ciclo de tirar dados
+    
+                    actualizarTablaFrecuencias();
+                } // fin de la función tirarDados
+    
+                //incrementar el contador de frecuencias apropiado
+                function sumarTiros( cara ){
+                    switch ( cara ){
+                        case 1:
+                            ++frecuancia1;
+                            break;
+                        case 2:
+                            ++frecuancia2;
+                            break;
+                        case 3:
+                            ++frecuancia3;
+                            break;
+                        case 4:
+                            ++frecuancia4;
+                            break;
+                        case 5:
+                            ++frecuancia5;
+                            break;
+                        case 6:
+                            ++frecuancia6;
+                            break;
+                    } //fin de switch
+                } //fin de la función sumarTiros
+    
+                //establecer origen de imagen para un cara
+                function establecerImagen( numeroDado, cara ){
+                    let imgDado = document.getElementById("cara" + numeroDado);
+                    imgDado.setAttribute("src","../../Images/cara" + cara + ".png");
+                    imgDado.setAttribute("alt", "dado con " + cara + " punto(s)");
+                } //fin de la función establecerImagen
+    
+                //actualizar tabla de frecuencias en la página
+                function actualizarTablaFrecuencias(){
+                    let divTabla = document.getElementById("divTablaFrecuencias");
+                    divTabla.innerHTML = "<table>" +
+                        "<caption>Frecuencias de tiro de los dados</caption>" +
+                        "<thead><th>Cara</th><th>Frecuencia</th>"+
+                        "<th>Porcentaje</th></thead>" + 
+                        "<tbody><tr><td>1</td><td>" + frecuancia1 + "</td><td>" + formatoPorcentaje(frecuancia1 / totalDados) + "</td></tr>" + "<tr><td>2</td><td>"+ frecuancia2 + "</td><td>" + formatoPorcentaje(frecuancia2 / totalDados) + "</td></tr>" + "<tr><td>3</td><td>" + frecuancia3 + "</td><td>" + formatoPorcentaje(frecuancia3 / totalDados) + "</td></tr>" + "<tr><td>3</td><td>" + frecuancia4 + "</td><td>" + formatoPorcentaje(frecuancia4 / totalDados) + "</td></tr>" + "<tr><td>3</td><td>" + frecuancia5 + "</td><td>" + formatoPorcentaje(frecuancia5 / totalDados) + "</td></tr>" + "<tr><td>3</td><td>" + frecuancia6 + "</td><td>" + formatoPorcentaje(frecuancia6 / totalDados) + "</td></tr>" + "</tbody></table>";
+                } //fin de la función actualizarTablaFrecuencias
+    
+                //aplicar formato al procentaje
+                function formatoPorcentaje( valor ){
+                    valor *= 100;
+                    return valor.toFixed(2);
+                } //fin de la función formatoPorcentaje
+    
+                window.addEventListener("load", iniciar, false);
+            </script>
+            
+            <br><br>
+            <form action="#">
+                <input type="button" value="Tirar dados" id="botonTirar" class="inicio">
+            </form>
+            <p>
+                <img src="../../Images/cuadrado_blanco.png" alt="imagen de cara 1" id="cara1" width="100px" height="100px">
+                <img src="../../Images/cuadrado_blanco.png" alt="imagen de cara 2" id="cara2" width="100px" height="100px">
+                <img src="../../Images/cuadrado_blanco.png" alt="imagen de cara 3" id="cara3" width="100px" height="100px">
+                <img src="../../Images/cuadrado_blanco.png" alt="imagen de cara 4" id="cara4" width="100px" height="100px">
+                <img src="../../Images/cuadrado_blanco.png" alt="imagen de cara 5" id="cara5" width="100px" height="100px">
+                <img src="../../Images/cuadrado_blanco.png" alt="imagen de cara 6" id="cara6" width="100px" height="100px">
+            </p>
+            <p>
+                <img src="../../Images/cuadrado_blanco.png" alt="imagen de cara 7" id="cara7" width="100px" height="100px">
+                <img src="../../Images/cuadrado_blanco.png" alt="imagen de cara 8" id="cara8" width="100px" height="100px">
+                <img src="../../Images/cuadrado_blanco.png" alt="imagen de cara 9" id="cara9" width="100px" height="100px">
+                <img src="../../Images/cuadrado_blanco.png" alt="imagen de cara 10" id="cara10" width="100px" height="100px">
+                <img src="../../Images/cuadrado_blanco.png" alt="imagen de cara 11" id="cara11" width="100px" height="100px">
+                <img src="../../Images/cuadrado_blanco.png" alt="imagen de cara 12" id="cara12" width="100px" height="100px">
+            </p>
+            
+            <div id="divTablaFrecuencias"></div>
+        </section>
+        </article>
+        <section class="botones">
+            <a href="Ejemplo9_4.html">
+                <label>
+                    <input type="submit" name="anterior" class="anterior" value="Anterior"/>
+                </label>
+            </a>
+            <a href="Ejemplo9_5.html">
+                <label>
+                    <input type="submit" name="inicio" class="inicio" value="Inicio">
+                </label>
+            </a>
+            <a href="Ejemplo9_8.html">
+                <label>
+                    <input type="submit" name="siguiente" class="siguiente" value="Siguiente">
+                </label>
+            </a>
+        </section>
+    </body>
+    
+</html>

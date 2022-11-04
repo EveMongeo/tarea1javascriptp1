@@ -1,0 +1,129 @@
+<!-- Montero Gómez Evelin -->
+<!-- Programación Web -->
+<!DOCTYPE html>
+
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejercicio 9.25</title>
+        <link rel="stylesheet" href="../../styles/styles-ejer.css">
+        <!-- Fuente -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Clicker+Script&display=swap" rel="stylesheet">
+        <script>
+            let botonAdivinar, botonReiniciar, numero_aleatorio;
+    
+            function iniciar(){
+                botonAdivinar = document.getElementById("adivinar");
+                botonReiniciar = document.getElementById("reiniciar");
+                let campoNumero = document.getElementById("campoNumero");
+                let mensajeFinal = document.getElementById("mensajeFinal");
+    
+                generarNumero();
+    
+                botonAdivinar.addEventListener("click", validar, false);
+                botonReiniciar.addEventListener("click", reload, false);
+            }
+    
+            function reload(){
+                botonAdivinar.disabled = false;
+                botonReiniciar.disabled = true;
+                campoNumero.value = "";
+                mensajeFinal.innerHTML = "";
+                generarNumero();
+            }
+    
+            function generarNumero(){
+                numero_aleatorio = Math.floor(Math.random() * (1000 - 1 + 1) + 1 );
+                console.log(numero_aleatorio);
+            }
+            function validar(){
+                let numero_usuario = parseInt(campoNumero.value);
+                switch(true){
+                    case numero_usuario == numero_aleatorio:
+                        mensajeFinal.innerHTML = "Felicidades. ¡Adivinó el número!";
+                        botonAdivinar.disabled = true;
+                        botonReiniciar.disabled = false;
+                        break;
+                    case numero_usuario < numero_aleatorio:
+                        mensajeFinal.innerHTML = "Demasiado Bajo. Intente de nuevo.";
+                        campoNumero.value = "";
+                        break;
+                    case numero_usuario > numero_aleatorio:
+                        mensajeFinal.innerHTML = "Demasiado alto. Intente de nuevo.";
+                        campoNumero.value = "";
+                        break;
+                    default:
+                        mensajeFinal.innerHTML = "Introduzca un valor válido.";
+                        campoNumero.value = "";
+                        break;
+                }
+            }
+            window.addEventListener("load", iniciar, false);
+        </script>
+    </head>
+    <style type="text/css">
+        ul{
+            list-style: none;
+        }
+    </style>
+
+    <body>
+
+        <!-- Banner -->
+    <header class="banner">
+        <a href="../../index.html">
+            <label>
+                <input type="submit" name="regresar" class="boton-indice" value="Regresar">
+            </label>
+        </a>
+        <h1 id="titulo">Capítulo 9: Ejercicios</h1>
+        <p id="parrafo">
+            <strong>
+                < Ejercicio 9.25 />
+            </strong>
+        </p>
+        <h2 id="nombre">Montero G&oacute;mez Evelin</h2>
+        <!-- Botón direccionador a índice -->
+    </header>
+    
+    <header class="encabezado">
+        <h1 id="encabezado">Adivinar el número</h1>
+    </header>
+
+        <!-- Contenedor -->
+        <article class="contenedor">
+            <p>
+                Escriba una secuencia de comandos que juegue a <em>"adivinar el número"</em> de la siguiente manera: su programa debe elegir el número a adivinar, para lo cual se seleccionar un entero aleatorio en el rango de 1 a 1000. La secuencia de comandos muestra el indicador <em>Adivine un número entre 1 y 1000</em> enseguida de un campo de texto. El jugador escribe su primer intento en el campo de texto y hace clic en un botón para enviarlo a la secuencia de comandos. Si el intento del jugador es incorrecto, su programa deberá mostrar los mensajes <em>Demasiado alto. Intente de nuevo.</em> o <em>Demasiado bajo. Intente de nuevo.</em> para ayudar al jugador a <em>"acercarse"</em> a la respuesta correcta y deberá borrar el campo de texto para que el usuario pueda introducir el siguiente intento. Cuando el usuario introduzca la respuesta correcta, muestre el mensaje <em>Felicidades. ¡Adivinó el número!</em> y borre el campo de texto para que el usuario pueda jugar otra vez.
+            </p>
+            <p>Adivinar un número entre 1 y 1000:</p>
+            <form action="#">
+                <input type="number" name="Numero" id="campoNumero">
+                <input type="button" value="Adivinar" id="adivinar">
+                <input type="button" value="Reiniciar" id="reiniciar" disabled>
+            </form>
+            <p id="mensajeFinal"></p>
+          
+        </article>
+
+        <section class="botones">
+            <a href="Ejercicio9_24.html">    <!-- anterior -->
+                <label>
+                    <input type="submit" name="anterior" class="anterior" value="Anterior"/>
+                </label>
+            </a>
+            <a href="Ejercicio9_1.html">
+                <label>
+                    <input type="submit" name="inicio" class="inicio" value="Inicio">
+                </label>
+            </a>
+            <a href="Ejercicio9_26.html">    <!-- siguiente -->
+                <label>
+                    <input type="submit" name="siguiente" class="siguiente" value="Siguiente">
+                </label>
+            </a>
+        </section>
+    </body>
+</html>

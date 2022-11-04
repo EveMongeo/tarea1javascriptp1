@@ -1,0 +1,93 @@
+<!-- Montero Gómez Evelin -->
+<!-- Programación Web -->
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejemplo 9.4</title>
+        <link rel="stylesheet" href="../../styles/styles-ejer.css">
+        <!-- Fuente -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Clicker+Script&display=swap" rel="stylesheet">
+    </head>
+    <style type="text/css">
+        li { display: inline; margin-right: 10px; }
+        ul { margin: 0; }
+    </style>
+    <body>
+
+        <!-- Banner -->
+    <header class="banner">
+        <a href="../../index.html">
+            <label>
+                <input type="submit" name="regresar" class="boton-indice" value="Regresar">
+            </label>
+        </a>
+        <h1 id="titulo">Capítulo 9: Ejemplos</h1>
+        <p id="parrafo">
+            <strong>
+                < Ejemplo 9.4 />
+            </strong>
+        </p>
+        <h2 id="nombre">Montero G&oacute;mez Evelin</h2>
+        <!-- Botón direccionador a índice -->
+    </header>
+    
+    <style type="text/css">
+        p { margin: 0px; }
+    </style>
+
+    <header class="encabezado">
+        <h1 id="encabezado">Factoriales</h1>
+    </header>
+
+        <!-- Contenedor -->
+        <article class="contenedor">
+            <script>
+                var salida = ""; //almacena la salida
+    
+                //calcula los factoriales de 0a 10
+                function calcularFactoriales(){
+                    for ( var i = 0; i <= 10; ++i )
+                        salida += "<p>" + i + "! = " + factorial( i ) + "</p>";
+    
+                    document.getElementById("resultados").innerHTML = salida;
+                } //fin de la función calcularFactoriales
+    
+                //definición recursiva de la función factorial
+                function factorial( numero ){
+                    if( numero <= 1 )//caso base
+                        return 1;
+                    else
+                        return numero * factorial( numero - 1 );
+                } //fin de la función factorial
+    
+                window.addEventListener("load", calcularFactoriales, false);
+            </script>
+            <br><br>
+
+            <h1>Factoriales de 0 a 10</h1>
+            <div id="resultados"></div>
+        </article>
+
+        <section class="botones">
+            <a href="Ejemplo9_8.html">
+                <label>
+                    <input type="submit" name="anterior" class="anterior" value="Anterior"/>
+                </label>
+            </a>
+            <a href="Ejemplo9_9.html">
+                <label>
+                    <input type="submit" name="inicio" class="inicio" value="Inicio">
+                </label>
+            </a>
+            <a href="../Ejercicios/Ejercicio9_1.html">
+                <label>
+                    <input type="submit" name="siguiente" class="siguiente" value="Siguiente">
+                </label>
+            </a>
+        </section>
+    </body>
+</html>

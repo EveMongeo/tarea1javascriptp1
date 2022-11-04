@@ -1,0 +1,101 @@
+<!-- Montero Gómez Evelin -->
+<!-- Programación Web -->
+<!DOCTYPE html>
+
+
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejercicio 9.15</title>
+        <link rel="stylesheet" href="../../styles/styles-ejer.css">
+        <!-- Fuente -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Clicker+Script&display=swap" rel="stylesheet">
+        <script>
+            function ingresar(){
+                let numero = 0;
+                let resultado = document.getElementById("resultado");
+    
+                while(numero != -1){
+                    numero = window.prompt("Ingrese un número\n[-1 para salir]", "0");
+    
+                    numero = parseInt(numero);
+    
+                    if(Number.isInteger(numero)){
+                        if(numero <= -1)
+                            break;
+                        else
+                            (esPar(numero)) ?
+                                resultado.innerHTML += "<p>" + numero + " es par.</p>" :
+                                resultado.innerHTML += "<p>" + numero + " no es par.</p>";
+                    }
+                }
+            }
+    
+            function esPar(num){
+                return num % 2 == 0;
+            }
+            window.addEventListener("load", ingresar, false);
+        </script>
+    </head>
+    <style type="text/css">
+        ul{
+            list-style: none;
+        }
+    </style>
+
+    <body>
+
+        <!-- Banner -->
+    <header class="banner">
+        <a href="../../index.html">
+            <label>
+                <input type="submit" name="regresar" class="boton-indice" value="Regresar">
+            </label>
+        </a>
+        <h1 id="titulo">Capítulo 9: Ejercicios</h1>
+        <p id="parrafo">
+            <strong>
+                < Ejercicio 9.15 />
+            </strong>
+        </p>
+        <h2 id="nombre">Montero G&oacute;mez Evelin</h2>
+        <!-- Botón direccionador a índice -->
+    </header>
+    
+    <header class="encabezado">
+        <h1 id="encabezado">Función es par</h1>
+    </header>
+
+        <!-- Contenedor -->
+        <article class="contenedor">
+            <p>
+                Escriba una secuencia de comandos que reciba enteros (uno a la vez) y los pase a la función <em>esPar</em>, que utiliza el operador módulo para determinar si un entero es par. La función debe recibir un argumento entero y devolver <em>true</em> si el entero es <em>par</em>, y <em>false</em> en caso contrario. Uso los ciclos controlados por centinela y un diálogo <em>promt</em>.
+            </p>
+            
+            <p id="resultado"></p>
+
+          
+        </article>
+
+        <section class="botones">
+            <a href="Ejercicio9_14.html">    <!-- anterior -->
+                <label>
+                    <input type="submit" name="anterior" class="anterior" value="Anterior"/>
+                </label>
+            </a>
+            <a href="Ejercicio9_1.html">
+                <label>
+                    <input type="submit" name="inicio" class="inicio" value="Inicio">
+                </label>
+            </a>
+            <a href="Ejercicio9_16.html">    <!-- siguiente -->
+                <label>
+                    <input type="submit" name="siguiente" class="siguiente" value="Siguiente">
+                </label>
+            </a>
+        </section>
+    </body>
+</html>

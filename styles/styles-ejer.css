@@ -1,0 +1,160 @@
+/* Hoja de diseño de CSS3 */
+/* Montero Gómez Evelin */
+
+body{
+    margin: 0;
+    padding: 1em;
+    font-family: Arial, Helvetica, sans-serif; 
+    background-color: white;
+    font-size: 1em;
+    overflow-x: hidden; /* Oculta barra de desplazamiento en X */
+}
+
+/* Sección para banner */
+
+.banner{
+    padding: 1.5em;
+    background: black;
+    border-radius: 8px;
+    text-align: center;
+    height: 10em;
+    width: 1180px;
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: .5em;
+}
+
+#titulo{
+    top: 2em;
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+    position: static;
+    text-align: center;
+}
+
+#nombre{
+    font-family: 'Clicker Script', cursive;
+    font-size: 1.3em;
+    color: white;
+    position: static;
+}
+#parrafo{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.3em;
+    color: white;
+    position: static;
+}
+#encabezado{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2em;
+    position: static;
+}
+
+/* Sección para encabezado */
+.encabezado{
+    text-align: center;
+    height: auto;
+    width: 1225px;
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: .5em;
+    margin-bottom: auto;
+    background: white;
+    border-style: groove;
+    border-width: 2px;
+    border-color: black;
+    border-radius: 8px;
+    float: none;
+}
+.contenedor{
+    line-height: 2em;
+    position: relative;
+    width: 1200px;
+    height: auto;
+    padding: 1em;
+    border-radius: 8px;
+    /* Centrar */
+    display: block;
+    margin-top: .5em;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: justify;
+    background: lightgray;
+}
+
+/* Boton para el índice */
+.boton-indice{
+    font-size: 16px;
+    padding: 10px;
+    color: black;
+    background-color: white;
+    border: 1px solid lightslategrey;
+    float: left;
+    border-radius: .5em;
+    position: fixed;
+    left: 5em;
+}
+.boton-indice:hover{
+    width: 100px;
+    height: 45px;
+    cursor: pointer;
+}
+
+/* Contenedor para botones inferiores atrás y siguiente */
+.botones{
+background: white;
+margin-top: 1em;
+margin-bottom: 2em;
+height: 70px;
+width: 300px;
+display: block;
+margin-left: auto;
+margin-right: auto;
+text-align: center;
+}
+.inicio{
+    font-size: 16px;
+    padding: 10px;
+    color: black;
+    float: left;
+    border-radius: .5em;
+    border-color: white;
+    float: none;
+}
+.inicio:hover{
+    width: 100px;
+    height: 45px;
+    cursor: pointer;
+}
+.anterior{
+    font-size: 16px;
+    padding: 10px;
+    color: black;
+    float: left;
+    border-radius: .5em;
+    border-color: white;
+    float: left;
+}
+.anterior:hover{
+    width: 100px;
+    height: 45px;
+    cursor: pointer;
+}
+.siguiente{
+    font-size: 16px;
+    padding: 10px;
+    color: black;
+    float: left;
+    border-radius: .5em;
+    border-color: white;
+    float: right;
+}
+.siguiente:hover{
+    width: 100px;
+    height: 45px;
+    cursor: pointer;
+}

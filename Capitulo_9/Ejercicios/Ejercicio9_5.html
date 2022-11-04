@@ -1,0 +1,121 @@
+<!-- Montero Gómez Evelin -->
+<!-- Programación Web -->
+<!DOCTYPE html>
+
+
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejercicio 9.5</title>
+        <link rel="stylesheet" href="../../styles/styles-ejer.css">
+        <!-- Fuente -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Clicker+Script&display=swap" rel="stylesheet">
+
+    </head>
+    <style type="text/css">
+        ul{
+            list-style: none;
+        }
+    </style>
+
+    <body>
+
+        <!-- Banner -->
+    <header class="banner">
+        <a href="../../index.html">
+            <label>
+                <input type="submit" name="regresar" class="boton-indice" value="Regresar">
+            </label>
+        </a>
+        <h1 id="titulo">Capítulo 9: Ejercicios</h1>
+        <p id="parrafo">
+            <strong>
+                < Ejercicio 9.5 />
+            </strong>
+        </p>
+        <h2 id="nombre">Montero G&oacute;mez Evelin</h2>
+        <!-- Botón direccionador a índice -->
+    </header>
+    
+    <header class="encabezado">
+        <h1 id="encabezado">Localice el error en cada uno de los siguientes segmentos de programa y explique cómo corregirlo:</h1>
+    </header>
+
+        <!-- Contenedor -->
+        <article class="contenedor">
+            <ul class="boxContent" type="a">
+                <div class="oracion">
+                    <li>
+                        <b>method</b> g() <br>
+                        { <br>
+                        &emsp;&emsp;document.writeln( "Dentro del método g" ); <br>
+                        }
+                    </li>
+                    <p class="respuesta">
+                        >> <em>method</em> no es la palabra que se usa para definir una función: <br>
+                        <b>function</b> g() <br>
+                        { <br>
+                        &emsp;&emsp;document.writeln( "Dentro del método g" ); <br>
+                        }
+                    </p>
+                </div>
+                <div class="oracion">
+                    <li>
+                        >> Regresa la suma de sus argumentos <br>
+                        <b>function</b> suma(x, y) <br>
+                        { <br>
+                        &emsp;&emsp;<b>var</b> resultado; <br>
+                        &emsp;&emsp;resultado = x + y; <br>
+                        }
+                    </li>
+                    <p class="respuesta">
+                        >> Está devolviendo la variable <em>resultado</em> sin valor: <br>
+                        <b>function</b> suma(x, y) <br>
+                        { <br>
+                        &emsp;&emsp;resultado = x + y; <br>
+                        &emsp;&emsp;<b>var</b> resultado; <br>
+                        }
+                    </p>
+                </div>
+                <div class="oracion">
+                    <li>
+                        <b>function</b> f( a ); <br>
+                        { <br>
+                        document.writeln( a ); <br>
+                        }
+                    </li>
+                    <p class="respuesta">
+                        >> Eliminar el punto y coma que está después del parámetro: <br>
+                        <b>function</b> f( a ) <br>
+                        { <br>
+                        document.writeln( a ); <br>
+                        }
+                    </p>
+                </div>
+            </ul>
+            
+          
+        </article>
+
+        <section class="botones">
+            <a href="Ejercicio9_4.html">
+                <label>
+                    <input type="submit" name="anterior" class="anterior" value="Anterior"/>
+                </label>
+            </a>
+            <a href="Ejercicio9_1.html">
+                <label>
+                    <input type="submit" name="inicio" class="inicio" value="Inicio">
+                </label>
+            </a>
+            <a href="Ejercicio9_6.html">
+                <label>
+                    <input type="submit" name="siguiente" class="siguiente" value="Siguiente">
+                </label>
+            </a>
+        </section>
+    </body>
+</html>

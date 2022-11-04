@@ -1,0 +1,182 @@
+<!-- Montero Gómez Evelin -->
+<!-- Programación Web -->
+<!DOCTYPE html>
+
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejercicio 9.23</title>
+        <link rel="stylesheet" href="../../styles/styles-ejer.css">
+        <!-- Fuente -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Clicker+Script&display=swap" rel="stylesheet">
+        <script>
+            let numeros = [], resp, aciertos = 0, primera = true;
+    
+            function iniciar(){
+                let boton = document.getElementById("botonResponder");
+                let campoRes = document.getElementById("campoRes");
+                let mensajeR = document.getElementById("mensajeR");
+                let preguntaTexto = document.getElementById("preguntaTexto");
+                let correctos = document.getElementById("correctos");
+                
+                validar();
+    
+                boton.addEventListener("click", validar, false);
+            }
+    
+            function validar(){
+                if(primera)
+                    generar();
+                else{
+                    if(parseFloat(resp).toFixed(2) == parseFloat(campoRes.value).toFixed(2)){
+                        mensajeR.innerHTML = respCorrectas();
+                        aciertos++;
+                        correctos.innerHTML = "Respuestas correctas: " + aciertos;
+                        generar();
+                    }else mensajeR.innerHTML = respIncorrectas();
+                }
+            }
+    
+            function respCorrectas(){
+                let selec = Math.floor(Math.random() * (4 - 1 + 1) + 1 );
+                switch(selec){
+                    case 1:
+                        return "Muy bien.";
+                    case 2:
+                        return "Excelente.";
+                    case 3:
+                        return "Buen trabajo.";
+                    case 4:
+                        return "Siga así.";
+                }
+            }
+            function respIncorrectas(){
+                let selec = Math.floor(Math.random() * (4 - 1 + 1) + 1 );
+                switch(selec){
+                    case 1:
+                        return "No. Intente de nuevo.";
+                    case 2:
+                        return "Equivocado. Trate una vez más.";
+                    case 3:
+                        return "No se dé provencido.";
+                    case 4:
+                        return "No. Siga intentando.";
+                }
+            }
+    
+            function generar(){
+                numeros.shift();
+                numeros.shift();
+                numeros.shift();
+                numeros.push(Math.floor(Math.random() * (9 - 1 + 1) + 1 )); //primer número
+                numeros.push(Math.floor(Math.random() * (9 - 1 + 1) + 1 )); //segundo número
+                numeros.push(Math.floor(Math.random() * (4 - 1 + 1) + 1 )); //pregunta
+    
+                switch(numeros[2]){
+                    case 1://pregunta de suma
+                        //document.writeln("Pregunta 1");
+                        preguntaTexto.innerHTML = "¿Cuánto es " + numeros[0] + " más " + numeros[1] + "?";
+                        resp = numeros[0] + numeros[1];
+                        break;
+                    case 2://pregunta de resta
+                        //document.writeln("Pregunta 2");
+                        preguntaTexto.innerHTML = "¿Cuánto es " + numeros[0] + " menos " + numeros[1] + "?";
+                        resp = numeros[0] - numeros[1];
+                        break;
+                    case 3://pregunta de producto
+                        //document.writeln("Pregunta 3");
+                        preguntaTexto.innerHTML = "¿Cuánto es " + numeros[0] + " por " + numeros[1] + "?";
+                        resp = numeros[0] * numeros[1];
+                        break;
+                    case 4://pregunta de división
+                        //document.writeln("Pregunta 4");
+                        preguntaTexto.innerHTML = "¿Cuánto es " + numeros[0] + " entre " + numeros[1] + "?";
+                        resp = numeros[0] / numeros[1];
+                        break;
+                }
+                primera = false;
+            }
+    
+            window.addEventListener("load", iniciar, false);
+        </script>
+    </head>
+    <style type="text/css">
+        ul{
+            list-style: none;
+        }
+    </style>
+
+    <body>
+
+        <!-- Banner -->
+    <header class="banner">
+        <a href="../../index.html">
+            <label>
+                <input type="submit" name="regresar" class="boton-indice" value="Regresar">
+            </label>
+        </a>
+        <h1 id="titulo">Capítulo 9: Ejercicios</h1>
+        <p id="parrafo">
+            <strong>
+                < Ejercicio 9.23 />
+            </strong>
+        </p>
+        <h2 id="nombre">Montero G&oacute;mez Evelin</h2>
+        <!-- Botón direccionador a índice -->
+    </header>
+    
+    <header class="encabezado">
+        <h1 id="encabezado">CAI</h1>
+    </header>
+
+        <!-- Contenedor -->
+        <article class="contenedor">
+            <p>
+                El uso de las computadoras en la educación se conoce como <em>instrucción asistida por computadoras</em> (CAI). Un problema que se desarrolla en los entornos CAI es la fatiga de los estudiantes. Este problema puede eliminarse si se varía el diálogo de la computadora para mantener la atención del estudiante. Modifique el programa del ejercicio 9.22 para que imprima una variedad de contenido para cada respuesta correcta y cada respuesta incorrecta. El conjunto de respuestas correctas es el siguiente:
+                <em>Muy bien.</em> <br>
+                <em>Excelente.</em> <br>
+                <em>Buen trabajo.</em> <br>
+                <em>Siga así.</em> <br>
+                El conjunto de respuestas incorrectas es: <br>
+                <em>No. Intente de nuevo.</em> <br>
+                <em>Equivocado. Trate una vez más.</em> <br>
+                <em>No se dé por vencido.</em> <br>
+                <em>No. Siga intentando.</em> </p>
+            </p>
+
+
+            <form action="#">
+                <p id="preguntaTexto"></p>
+                
+                <input type="number" name="Respuesta" id="campoRes">
+                <input type="button" value="Responder" id="botonResponder">
+                
+                <p id="mensajeR"></p>
+
+                <p id="correctos">Respuestas correctas: 0</p>
+            </form>
+          
+        </article>
+
+        <section class="botones">
+            <a href="Ejercicio9_22.html">    <!-- anterior -->
+                <label>
+                    <input type="submit" name="anterior" class="anterior" value="Anterior"/>
+                </label>
+            </a>
+            <a href="Ejercicio9_1.html">
+                <label>
+                    <input type="submit" name="inicio" class="inicio" value="Inicio">
+                </label>
+            </a>
+            <a href="Ejercicio9_24.html">    <!-- siguiente -->
+                <label>
+                    <input type="submit" name="siguiente" class="siguiente" value="Siguiente">
+                </label>
+            </a>
+        </section>
+    </body>
+</html>

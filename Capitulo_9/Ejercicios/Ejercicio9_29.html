@@ -1,0 +1,128 @@
+<!-- Montero Gómez Evelin -->
+<!-- Programación Web -->
+<!DOCTYPE html>
+
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejercicio 9.29</title>
+        <link rel="stylesheet" href="../../styles/styles-ejer.css">
+        <!-- Fuente -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Clicker+Script&display=swap" rel="stylesheet">
+        <script>
+            let potencia;
+    
+            function iniciar(){
+                let boton = document.getElementById("calcular");
+                let campoBase = document.getElementById("campoBase");
+                let campoExp = document.getElementById("campoExp");
+                let resultado = document.getElementById("resultado");
+    
+                boton.addEventListener("click", validar, false);
+            }
+    
+            function validar(){
+                let baseS = parseInt(campoBase.value);
+                let expS = parseInt(campoExp.value);
+                potencia = 1;
+                if( expS > 0 ){
+                    resultado.innerHTML = "" + baseS + "<sup>"+ expS +"</sup> = ";
+                
+                    if(expS > 0){    
+                        for(let i = 1; i <= expS; i++ ){
+                            if(i != expS)
+                                resultado.innerHTML += "" + baseS + " * ";
+                            else
+                                resultado.innerHTML += "" + baseS + " = ";
+                        }
+                    }
+                    resultado.innerHTML += "" + potenciaEntera(baseS, expS);
+                }
+                else
+                    window.alert("Ingrese un exponente mayor a 0.");
+            }
+            
+            function potenciaEntera( base, exponente ){
+                if(exponente == 0){
+                    return 1;
+                }
+                else{
+                    return base * potenciaEntera(base, exponente - 1);
+                }
+            }
+    
+            window.addEventListener("load", iniciar, false);
+        </script>
+    </head>
+    <style type="text/css">
+        ul{
+            list-style: none;
+        }
+    </style>
+
+    <body>
+
+        <!-- Banner -->
+    <header class="banner">
+        <a href="../../index.html">
+            <label>
+                <input type="submit" name="regresar" class="boton-indice" value="Regresar">
+            </label>
+        </a>
+        <h1 id="titulo">Capítulo 9: Ejercicios</h1>
+        <p id="parrafo">
+            <strong>
+                < Ejercicio 9.29 />
+            </strong>
+        </p>
+        <h2 id="nombre">Montero G&oacute;mez Evelin</h2>
+        <!-- Botón direccionador a índice -->
+    </header>
+    
+    <header class="encabezado">
+        <h1 id="encabezado">Función recursiva</h1>
+    </header>
+
+        <!-- Contenedor -->
+        <article class="contenedor">
+            <p>
+                Escriba una función	recursiva llamada <em>potencia( base, exponente )</em> que, cuando se invoque, devuelva <br>
+                <em>base<sup>exponente</sup></em> <br>
+                por ejemplo, <em>potencia(3,4) = 3 * 3 * 3 *3</em>. Suponga que <em>exponente</em> es un entero mayor o igual a 1. El paso de recursividad utilizaría la siguiente relación: <br>
+                <em>base<sup>exponente</sup> = base + base<sup>exponente - 1</sup></em> <br>
+                y la condición de terminación ocurre cuando <em>exponente</em> es igual a 1, ya que <br>
+                <em>base<sup>1</sup> = base</em> <br>
+                Incorpore esta función en una secuencia de comandos que permita al usuario introducir la <em>base</em> y el <em>exponente</em>
+            </p>
+
+            <form action="#">
+                <input type="number" name="Base" id="campoBase" placeholder="Base">
+                <input type="number" name="Exponente" id="campoExp" placeholder="Exp.">
+                <input type="button" value="Calcular exponente" id="calcular" onclick="iniciar">
+            </form>
+            <p id="resultado"></p>
+          
+        </article>
+
+        <section class="botones">
+            <a href="Ejercicio9_28.html">    <!-- anterior -->
+                <label>
+                    <input type="submit" name="anterior" class="anterior" value="Anterior"/>
+                </label>
+            </a>
+            <a href="Ejercicio9_1.html">
+                <label>
+                    <input type="submit" name="inicio" class="inicio" value="Inicio">
+                </label>
+            </a>
+            <a href="Ejercicio9_30.html">    <!-- siguiente -->
+                <label>
+                    <input type="submit" name="siguiente" class="siguiente" value="Siguiente">
+                </label>
+            </a>
+        </section>
+    </body>
+</html>

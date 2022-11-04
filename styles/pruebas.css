@@ -1,0 +1,72 @@
+.titulo-general {
+    background-color: lightgrey;
+    text-align: center;
+    padding: 0%;
+}
+
+.encabezado{
+    padding: .5em;
+    border-radius: 8px;
+    text-align: center;
+    height: auto;
+    width: 1215px;
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1em;
+    background: rgb(93, 109, 124);
+}
+
+.banner{
+    padding: 1.5em;
+    background: black;
+    border-radius: 8px;
+    text-align: center;
+    height: 10em;
+    width: 1180px;
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#titulo{
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+}
+#nombre{
+    font-family: 'Clicker Script', cursive;
+    font-size: 1.3em;
+    color: white;
+}
+#parrafo{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.3em;
+    color: white;
+}
+.contenedor{
+    line-height: 2em;
+    position: relative;
+    width: 1200px;
+    height: auto;
+    padding: 1em;
+    border-radius: 8px;
+    /* Centrar */
+    display: block;
+    margin-top: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background: lightgray;
+}
+
+.image{
+    width: 32.5px;
+    height: 50px;
+    position: relative;
+    float: right;
+    bottom: 160px;
+    right: 6em;
+    display: block;
+}

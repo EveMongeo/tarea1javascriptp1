@@ -1,0 +1,116 @@
+<!-- Montero Gómez Evelin -->
+<!-- Programación Web -->
+<!DOCTYPE html>
+
+
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejercicio 9.20</title>
+        <link rel="stylesheet" href="../../styles/styles-ejer.css">
+        <!-- Fuente -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Clicker+Script&display=swap" rel="stylesheet">
+        <script>
+            function iniciar(){
+                let boton = document.getElementById("calcular");
+                let campoC = document.getElementById("campoC");
+                let resultado = document.getElementById("resultado");
+    
+                boton.addEventListener("click", validar, false);
+            }
+    
+            function validar(){
+                let promedio = parseInt(campoC.value);
+                puntosCalidad(promedio);
+            }
+    
+            function puntosCalidad(pro){
+                switch(true){
+                    case pro >= 90 && pro <= 100:
+                        resultado.innerHTML = "Calidad: 4";
+                        break;
+                    case pro >= 80 && pro <= 89:
+                        resultado.innerHTML = "Calidad: 3";
+                        break;
+                    case pro >= 70 && pro <= 79:
+                        resultado.innerHTML = "Calidad: 2";
+                        break;
+                    case pro >= 60 && pro <= 69:
+                        resultado.innerHTML = "Calidad: 1";
+                        break;
+                    case pro >= 0 && pro < 60:
+                        resultado.innerHTML = "Calidad: 0";
+                        break;
+                    default:
+                        window.alert("Ingrese una calificación de [1 a 100]");
+                        break;
+                }
+            }
+    
+            window.addEventListener("load", iniciar, false);
+        </script>
+    </head>
+    <style type="text/css">
+        ul{
+            list-style: none;
+        }
+    </style>
+
+    <body>
+
+        <!-- Banner -->
+    <header class="banner">
+        <a href="../../index.html">
+            <label>
+                <input type="submit" name="regresar" class="boton-indice" value="Regresar">
+            </label>
+        </a>
+        <h1 id="titulo">Capítulo 9: Ejercicios</h1>
+        <p id="parrafo">
+            <strong>
+                < Ejercicio 9.20 />
+            </strong>
+        </p>
+        <h2 id="nombre">Montero G&oacute;mez Evelin</h2>
+        <!-- Botón direccionador a índice -->
+    </header>
+    
+    <header class="encabezado">
+        <h1 id="encabezado">Función puntos/h1>
+    </header>
+
+        <!-- Contenedor -->
+        <article class="contenedor">
+            <p>
+                Escriba una función llamada <em>puntosCalidad</em> que reciba el promedio de un estudiante y devuelva 4 si el promedio es de 90 a 100, 3 si es de 80 a 89, 2 si es de 70 a 79, 1 si es de 60 a 69 y 0 si es menor a 60. Incorpore la función en una secuencia de comandos que lea un valor del usuario.
+            </p>
+            <form action="#">
+                <input type="number" name="Calificacion" id="campoC">
+                <input type="button" value="Calidad" id="calcular">
+            </form>
+            <p id="resultado"></p>
+          
+        </article>
+
+        <section class="botones">
+            <a href="Ejercicio9_19.html">    <!-- anterior -->
+                <label>
+                    <input type="submit" name="anterior" class="anterior" value="Anterior"/>
+                </label>
+            </a>
+            <a href="Ejercicio9_1.html">
+                <label>
+                    <input type="submit" name="inicio" class="inicio" value="Inicio">
+                </label>
+            </a>
+            <a href="Ejercicio9_21.html">    <!-- siguiente -->
+                <label>
+                    <input type="submit" name="siguiente" class="siguiente" value="Siguiente">
+                </label>
+            </a>
+        </section>
+    </body>
+</html>

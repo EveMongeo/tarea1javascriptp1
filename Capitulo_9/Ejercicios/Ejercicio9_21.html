@@ -1,0 +1,108 @@
+<!-- Montero Gómez Evelin -->
+<!-- Programación Web -->
+<!DOCTYPE html>
+
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejercicio 9.21</title>
+        <link rel="stylesheet" href="../../styles/styles-ejer.css">
+        <!-- Fuente -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Clicker+Script&display=swap" rel="stylesheet">
+        <script>
+            let rand, lado = "", contCruz = 0, contCara = 0;
+            
+            function iniciar(){
+                let boton = document.getElementById("lanzar");
+                let resultado = document.getElementById("resultado");
+                let imagen = document.getElementById("imagen");
+                let contador = document.getElementById("contador");
+    
+                boton.addEventListener("click", lanzarMoneda, false);
+            }
+    
+            function lanzarMoneda(){
+                rand = Math.floor(Math.random() * (2 - 1 + 1) + 1 );
+                
+                (rand == 1) ? lado = "Cara" : lado = "Cruz";
+                
+                (arrojar()) ? contCara++ : contCruz++;
+    
+                resultado.innerHTML = "El resultado es: " + lado + "";
+                imagen.setAttribute("src", "img/"+lado+".png");
+                imagen.setAttribute("alt", "Lado " + lado + " de la moneda.");
+                contador.innerHTML = "Total cara: " + contCara + "<br>Total cruz: " + contCruz;
+            }
+    
+            function arrojar(){
+                return lado == "Cara";
+            }
+    
+            window.addEventListener("load", iniciar, false);
+    
+        </script>
+    </head>
+    <style type="text/css">
+        ul{
+            list-style: none;
+        }
+    </style>
+
+    <body>
+
+        <!-- Banner -->
+    <header class="banner">
+        <a href="../../index.html">
+            <label>
+                <input type="submit" name="regresar" class="boton-indice" value="Regresar">
+            </label>
+        </a>
+        <h1 id="titulo">Capítulo 9: Ejercicios</h1>
+        <p id="parrafo">
+            <strong>
+                < Ejercicio 9.21 />
+            </strong>
+        </p>
+        <h2 id="nombre">Montero G&oacute;mez Evelin</h2>
+        <!-- Botón direccionador a índice -->
+    </header>
+    
+    <header class="encabezado">
+        <h1 id="encabezado">Lanzamiento de monedas</h1>
+    </header>
+
+        <!-- Contenedor -->
+        <article class="contenedor">
+            <p>
+                Escriba una secuencia de comandos que simule el lanzamiento de monedas. Deje que el programa lance la modena cada vez que el usuario haga clic en el botón <em>Lanzar</em>. Cuente el número de veces que aparezca cada lado de la moneda. Muestre los resultados. El programa deberá llamar a una función separada de nombre <em>arrojar</em>, que no reciba argumentos y devuelva <em>false</em> para cruz y <em>true</em> para cara. [<em>Nota</em>: si el programa simula de manera realista el lanzamiento de monedas, cada lado de la moneda deberá aparecer aproximadamente la mitad del tiempo].
+            </p>
+            <input type="button" value="Lanzar" id="lanzar">
+            <p id="resultado"></p>
+            <img src="img/solido.png" alt="Moneda" style="width: 100px; height: 100px;" id="imagen">
+            <p id="contador"></p>
+
+          
+        </article>
+
+        <section class="botones">
+            <a href="Ejercicio9_20.html">    <!-- anterior -->
+                <label>
+                    <input type="submit" name="anterior" class="anterior" value="Anterior"/>
+                </label>
+            </a>
+            <a href="Ejercicio9_1.html">
+                <label>
+                    <input type="submit" name="inicio" class="inicio" value="Inicio">
+                </label>
+            </a>
+            <a href="Ejercicio9_22.html">    <!-- siguiente -->
+                <label>
+                    <input type="submit" name="siguiente" class="siguiente" value="Siguiente">
+                </label>
+            </a>
+        </section>
+    </body>
+</html>

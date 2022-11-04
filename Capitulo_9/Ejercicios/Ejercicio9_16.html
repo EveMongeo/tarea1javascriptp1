@@ -1,0 +1,167 @@
+<!-- Montero Gómez Evelin -->
+<!-- Programación Web -->
+<!DOCTYPE html>
+
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejercicio 9.16</title>
+        <link rel="stylesheet" href="../../styles/styles-ejer.css">
+        <!-- Fuente -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Clicker+Script&display=swap" rel="stylesheet">
+        <script>
+
+            function iniciar(){
+                let numeroS = window.prompt("Ingrese un numero entero [1 al 99999]", "1");
+    
+                let resultado = document.getElementById("resultado");
+    
+                validar(numeroS);
+            }
+    
+            function validar(numS){
+                if(Number.isInteger(parseInt(numS)) && (parseInt(numS) >= 1 && parseInt(numS) <= 99999)) 
+                    mostrarDigitos(numS);
+                else
+                    window.alert("Ingrese un valor válido.");
+            }
+    
+            function mostrarDigitos(numero){
+                let numeroEntero = parseInt(numero);
+                let temp = 0, div = 1;
+                for(let i = 1; i < numero.length; i++) 
+                    div *= 10;
+                    
+                for(let i = 1; i <= numero.length; i++){
+                    
+                    if( i == 1 ){
+                        temp = parseInt(numeroEntero / div);
+                        div /= 10;
+                    }
+                    else if(i == numero.length) 
+                        temp = parseInt(numeroEntero % 10);
+                    else{
+                        temp = parseInt((numeroEntero / div) % 10);
+                        div /= 10;
+                    }
+                    
+                    resultado.innerHTML += temp + "  ";
+                }
+                
+            }
+    
+            window.addEventListener("load", iniciar, false);
+        </script>
+    </head>
+    <style type="text/css">
+        ul{
+            list-style: none;
+        }
+    </style>
+
+    <body>
+
+        <!-- Banner -->
+    <header class="banner">
+        <a href="../../index.html">
+            <label>
+                <input type="submit" name="regresar" class="boton-indice" value="Regresar">
+            </label>
+        </a>
+        <h1 id="titulo">Capítulo 9: Ejercicios</h1>
+        <p id="parrafo">
+            <strong>
+                < Ejercicio 9.16 />
+            </strong>
+        </p>
+        <h2 id="nombre">Montero G&oacute;mez Evelin</h2>
+        <!-- Botón direccionador a índice -->
+    </header>
+    
+    <header class="encabezado">
+        <h1 id="encabezado">Tareas</h1>
+    </header>
+
+        <!-- Contenedor -->
+        <article class="contenedor">
+            <p>
+                Escriba segmentos de programa que realicen cada una de las siguientes tareas:
+            </p>
+            
+            <ol>
+                <li>
+                    Calcule la parte entera del cociente cuando el entero a se divide entre el entero b.
+                </li>
+                <p>
+                    a = parseInt( a ); <br>
+                    b = parseInt( b ); <br>
+                    cociente = parseInt(a / b);
+                </p>
+            
+                <li>
+                    Calcule el residuo entero cuando el entero a se divide entre el entero b.
+                </li>
+                <p>
+                    a = parseInt( a ); <br>
+                    b = parseInt( b ); <br>
+                    residuo = parseInt(a % b);
+                </p>
+            
+            
+                <li>
+                    Use las piezas de programa que se desarrollaron en las partes <em>(a) y (b)</em> para escribir una función llamada <em>mostrarDigitos</em> que reciba un entero entre 1 y 99999, para luego imprimirlo como una serie de dígitos, de los cuales cada par se separa mediante dos espacios. Por ejemplo, el entero 4562 debería imprimirse como: 4  5  6  2.
+                </li>
+                <p>
+
+                    <b>function</b> mostrarDigitos(numero){ <br>
+                        &emsp;&emsp;let numeroEntero = parseInt(numero); <br>
+                        &emsp;&emsp;let temp = 0, div = 1; <br>
+                        &emsp;&emsp;if(numeroEntero >= 1 && numeroEntero <= 99999){ <br> <br>
+                        &emsp;&emsp;&emsp;&emsp;for(let i = 1; i < numero.length; i++) div *= 10; <br><br>
+                        &emsp;&emsp;&emsp;&emsp;for(let i = 1; i <= numero.length; i++){ <br><br>
+                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;if( i == 1 ){ <br>
+                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;temp = parseInt(numeroEntero / div); <br>
+                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;div /= 10; <br>
+                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;} <br>
+                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;else if(i == numero.length)  <br>
+                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;temp = parseInt(numeroEntero % 10); <br>
+                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;else{ <br>
+                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;temp = parseInt((numeroEntero / div) % 10); <br>
+                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;div /= 10; <br>
+                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;} <br> <br>
+                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;document.writeln(temp + "&emsp;&emsp;"); <br>
+                        &emsp;&emsp;&emsp;&emsp;} <br>
+                        &emsp;&emsp;} <br>
+                    }
+                </p>
+                <li>
+                    Incorpore la función desarrollada en la parte (c) en una secuencia de comandos que reciba un entero de un diálogo <em>prompt</em> e invoque <em>mostrarDigitos</em> para pasar a la función del entero introducido.
+                </li>
+                <p  id="resultado"></p>
+                
+            </ol>
+          
+        </article>
+
+        <section class="botones">
+            <a href="Ejercicio9_15.html">    <!-- anterior -->
+                <label>
+                    <input type="submit" name="anterior" class="anterior" value="Anterior"/>
+                </label>
+            </a>
+            <a href="Ejercicio9_1.html">
+                <label>
+                    <input type="submit" name="inicio" class="inicio" value="Inicio">
+                </label>
+            </a>
+            <a href="Ejercicio9_17.html">    <!-- siguiente -->
+                <label>
+                    <input type="submit" name="siguiente" class="siguiente" value="Siguiente">
+                </label>
+            </a>
+        </section>
+    </body>
+</html>
